@@ -10,6 +10,69 @@ For each request, the agent must first determine whether deletion was actually r
 
 Read [`problem_statement.md`](./problem_statement.md) for the complete challenge contract.
 
+## Current implementation: audit candidate, not submission-ready
+
+Run: `ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056`, manager revision 3. The
+application validates inputs, interprets intent/business documents with AI,
+extracts JSON/SQL/log/text observations, reconstructs eligible resource states,
+applies policy and emits ordered audit plans. It never changes supplied records
+or connects to production. Essential unknowns remain diagnostics, not fabricated
+COMPLETE/absence. The normal run writes root output.csv atomically **only if
+all 518 rows are defensible**; otherwise exit 2 writes only a run-local subset.
+For the 2026-10-25 deadline, `code/deadline_export.py` produced a **partial,
+non-compliant** root output.csv: 407 of 518 rows (the 75 guarded rows plus 332
+INCOMPLETE rows each backed by an eligible policy violation). The remaining 111
+cases are omitted rather than guessed; see artifacts/.../deadline-export.json.
+AUD-002's historical object/source conflict remains unresolved; no sample exception,
+old-evidence TTL, source edit or label override is permitted. Current reports and
+implementer memory state the measured results and remaining acceptance gaps.
+
+### Implemented checks
+
+Prerequisites: Python 3.11+ with SQLite JSON support, authorized OpenCode V2
+access to `openai/gpt-6.1-sol`, pdftotext, Tesseract (English), and ImageMagick with
+the DejaVu-Sans font only to reproduce the historical synthetic image. Python uses only the standard
+library. No API credentials belong in this repository; configure authorized
+OpenCode access separately. Original data belongs in `dataset/`.
+
+```bash
+python3 -m unittest discover -s code/tests -v
+python3 code/main.py --check-inputs
+python3 code/evaluation/custom.py
+python3 code/evaluation/main.py
+python3 code/main.py
+python3 code/evaluation/report.py
+python3 code/package.py
+```
+
+Default dataset paths resolve from source, not the working directory. Unit tests
+require no provider credentials. Custom, sample and target runs use bounded fresh
+tool-denied OpenCode sessions; validated responses cache only inside this run,
+keyed by source/prompt/model/config/parser bytes. Changed versions invalidate
+cache entries. `python3 code/prepare.py` explicitly rebuilds the 94-artifact
+preprocessing snapshot; normal runs reuse a matching snapshot. The original
+one-off smoke script and records are preserved as historical evidence under
+artifacts/; current verification uses the integrated custom cases and business
+artifact pipeline above. Artifacts/telemetry/caches are outside code.zip. The CLI needs both
+cwd and PWD set to the isolated runtime workspace; no development role is invoked.
+Runtime auth is delegated to OpenCode; available OAuth metadata does not prove
+the selected credential or billing. Development ChatGPT sign-in is user-confirmed,
+but actual attributable subscription cost is unmeasured. Published API-equivalent
+reference scenarios are separate from actual charges; missing telemetry stays unknown.
+
+The sample evaluator runs the same prediction pipeline before reading labels.
+If some samples are unresolved, it reports partial metrics with explicit subset
+denominators and exits 2. To compare an existing complete sample file only, use
+`python3 code/evaluation/main.py --predictions <sample-output.csv>`; malformed
+present steps (including boolean/float numbering) fail, without renumbering them.
+The package command creates an allowlisted **candidate** code.zip, tests it in a
+temporary extraction with external dataset, and, when available, reproduces the
+latest target attempt using this run's external validated cache. That is not a
+cold-provider reproducibility claim or acceptance of unresolved decisions. No
+dataset, credentials, caches, raw artifacts, role memories or nested archive is bundled.
+
+Do **not** submit the candidate as a completed solution while acceptance gaps remain.
+
 ---
 
 ## Quick Start

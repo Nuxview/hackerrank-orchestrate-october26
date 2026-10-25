@@ -1,0 +1,89 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "cases": 4,
+  "status_correct": 0,
+  "sequence_correct": 0,
+  "whole_row_correct": 0,
+  "step_tp": 0,
+  "step_fp": 0,
+  "step_fn": 21,
+  "step_precision": null,
+  "step_recall": 0.0,
+  "step_f1": 0.0,
+  "field_correct": 0,
+  "field_denominator": 147,
+  "field_correct_by_name": {},
+  "union_slots": 21,
+  "confusion": [
+    {
+      "expected": "COMPLETE",
+      "predicted": "NOT_APPLICABLE",
+      "count": 4
+    }
+  ],
+  "differences": [
+    {
+      "case_id": "case_25",
+      "status_matches": false,
+      "first_differing_step": 1,
+      "expected": {
+        "step_no": 1,
+        "phase": "VERIFICATION",
+        "system_id": "account_service",
+        "resource_id": "account_3136",
+        "operation": "VERIFY_RECORD_ABSENT",
+        "state": "ABSENT",
+        "evidence_id": "evidence_92"
+      },
+      "predicted": null
+    },
+    {
+      "case_id": "case_26",
+      "status_matches": false,
+      "first_differing_step": 1,
+      "expected": {
+        "step_no": 1,
+        "phase": "VERIFICATION",
+        "system_id": "account_service",
+        "resource_id": "account_5684",
+        "operation": "VERIFY_RECORD_ABSENT",
+        "state": "ABSENT",
+        "evidence_id": "evidence_92"
+      },
+      "predicted": null
+    },
+    {
+      "case_id": "case_27",
+      "status_matches": false,
+      "first_differing_step": 1,
+      "expected": {
+        "step_no": 1,
+        "phase": "VERIFICATION",
+        "system_id": "account_service",
+        "resource_id": "account_3866",
+        "operation": "VERIFY_RECORD_ABSENT",
+        "state": "ABSENT",
+        "evidence_id": "evidence_92"
+      },
+      "predicted": null
+    },
+    {
+      "case_id": "case_28",
+      "status_matches": false,
+      "first_differing_step": 1,
+      "expected": {
+        "step_no": 1,
+        "phase": "VERIFICATION",
+        "system_id": "account_service",
+        "resource_id": "account_5482",
+        "operation": "VERIFY_RECORD_ABSENT",
+        "state": "ABSENT",
+        "evidence_id": "evidence_92"
+      },
+      "predicted": null
+    }
+  ],
+  "attempted": 32,
+  "unresolved": 28,
+  "full_sample_finalized": false
+}

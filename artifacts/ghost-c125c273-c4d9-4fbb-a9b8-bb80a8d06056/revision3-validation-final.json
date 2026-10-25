@@ -1,0 +1,16 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "at": "2026-10-25T13:00:39.120179+00:00",
+  "source_matches_execution": true,
+  "inputs_unchanged": true,
+  "target_execution_id": "final-fc426d06-e5d3-4d84-bf9e-0a3710a82c65",
+  "attempted": 518,
+  "internally_resolved": 75,
+  "unresolved": 443,
+  "subset_schema_citation_time_proof_reference_checks": true,
+  "independent_semantic_audit": false,
+  "subset_sha256": "083c6180972e1e47531f28cb43ea695828e03c6446e31f36684a836edb88325f",
+  "output_sha256": null,
+  "candidate_members": 28,
+  "candidate_sha256": "3b5d54a5cd29ac549972af5b7a7bbafe89cb6ec2aad002a8479f366d41de9a87"
+}

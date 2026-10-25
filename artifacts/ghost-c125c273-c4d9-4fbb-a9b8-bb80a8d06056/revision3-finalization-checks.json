@@ -1,0 +1,59 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "at": "2026-10-25T12:44:24.106426+00:00",
+  "checks": [
+    {
+      "name": "sample-final-snapshot",
+      "command": [
+        "python3",
+        "-B",
+        "code/evaluation/main.py"
+      ],
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "passed": true,
+      "stdout": "{\"run_id\": \"ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056\", \"execution_id\": \"sample-ec1bba4c-7363-451f-92b3-75eb2b5057b1\", \"attempted\": 32, \"defensible\": 2, \"unresolved\": 30, \"finalized\": false, \"metadata\": \"/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh/artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/sample-ec1bba4c-7363-451f-92b3-75eb2b5057b1/run.json\"}\n{\n  \"run_id\": \"ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056\",\n  \"cases\": 2,\n  \"status_correct\": 2,\n  \"sequence_correct\": 1,\n  \"whole_row_correct\": 1,\n  \"step_tp\": 5,\n  \"step_fp\": 0,\n  \"step_fn\": 1,\n  \"step_precision\": 1.0,\n  \"step_recall\": 0.8333333333333334,\n  \"step_f1\": 0.9090909090909091,\n  \"field_correct\": 35,\n  \"field_denominator\": 42,\n  \"field_correct_by_name\": {\n    \"evidence_id\": 5,\n    \"operation\": 5,\n    \"phase\": 5,\n    \"resource_id\": 5,\n    \"state\": 5,\n    \"step_no\": 5,\n    \"system_id\": 5\n  },\n  \"union_slots\": 6,\n  \"confusion\": [\n    {\n      \"expected\": \"COMPLETE\",\n      \"predicted\": \"COMPLETE\",\n      \"count\": 1\n    },\n    {\n      \"expected\": \"INCOMPLETE\",\n      \"predicted\": \"INCOMPLETE\",\n      \"count\": 1\n    }\n  ],\n  \"differences\": [\n    {\n      \"case_id\": \"case_03\",\n      \"status_matches\": true,\n      \"first_differing_step\": 3,\n      \"expected\": {\n        \"step_no\": 3,\n        \"phase\": \"VERIFICATION\",\n        \"system_id\": \"analytics_platform\",\n        \"resource_id\": \"analytics_9406\",\n        \"operation\": \"VERIFY_RECORD_ANONYMIZED\",\n        \"state\": \"ANONYMIZED\",\n        \"evidence_id\": \"evidence_94\"\n      },\n      \"predicted\": null\n    }\n  ],\n  \"attempted\": 32,\n  \"unresolved\": 30,\n  \"full_sample_finalized\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "target-final-snapshot",
+      "command": [
+        "python3",
+        "-B",
+        "code/main.py"
+      ],
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "passed": true,
+      "stdout": "{\"run_id\": \"ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056\", \"execution_id\": \"final-0e95253e-bcc5-4eff-a373-0e21653dfeeb\", \"attempted\": 518, \"defensible\": 75, \"unresolved\": 443, \"finalized\": false, \"metadata\": \"/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh/artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/final-0e95253e-bcc5-4eff-a373-0e21653dfeeb/run.json\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "reports-final",
+      "command": [
+        "python3",
+        "-B",
+        "code/evaluation/report.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "candidate-final",
+      "command": [
+        "python3",
+        "-B",
+        "code/package.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "{\"archive\": \"code.zip\", \"sha256\": \"932c5800a898629ebaad70f1a919c1bc3f1c28704b90e4ce5e4cbecae7952c6a\", \"members\": 28, \"candidate_only\": true}\n",
+      "stderr": ""
+    }
+  ],
+  "acceptance": false
+}

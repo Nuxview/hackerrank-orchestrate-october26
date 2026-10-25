@@ -1,0 +1,75 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "candidate_only": true,
+  "archive_sha256": "10d40a54bba163d73ffba756289129ebc3b280dc708552561700ca0d8c2d51ac",
+  "members": [
+    "README.md",
+    "code/ai.py",
+    "code/audit.py",
+    "code/deadline_export.py",
+    "code/evaluation/custom.py",
+    "code/evaluation/evaluation_report.md",
+    "code/evaluation/main.py",
+    "code/evaluation/report.py",
+    "code/evaluation/usage_collect.py",
+    "code/evaluation/usage_report.md",
+    "code/extract.py",
+    "code/facts.py",
+    "code/inputs.py",
+    "code/main.py",
+    "code/package.py",
+    "code/prepare.py",
+    "code/runtime/evidence.md",
+    "code/runtime/intent.md",
+    "code/runtime/opencode.json",
+    "code/sql_snapshot.py",
+    "code/steps.py",
+    "code/tests/test_ai.py",
+    "code/tests/test_audit.py",
+    "code/tests/test_core.py",
+    "code/tests/test_evaluator.py",
+    "code/tests/test_extraction.py",
+    "code/tests/test_usage.py",
+    "code/transport.py",
+    "code/usage.py"
+  ],
+  "checks": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "code/tests",
+        "-v"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_quota_failure_stops_additional_calls_until_new_execution (test_ai.InterpretationCacheTests.test_quota_failure_stops_additional_calls_until_new_execution) ... ok\ntest_same_run_identical_source_revalidated_without_new_call (test_ai.InterpretationCacheTests.test_same_run_identical_source_revalidated_without_new_call) ... ok\ntest_all_fifteen_policy_actions_and_conditions (test_audit.AuditCases.test_all_fifteen_policy_actions_and_conditions) ... ok\ntest_aud002_historical_object_kept_unresolved_until_eligible_readback (test_audit.AuditCases.test_aud002_historical_object_kept_unresolved_until_eligible_readback) ... ok\ntest_cust001_no_authorization_bypasses_everything (test_audit.AuditCases.test_cust001_no_authorization_bypasses_everything) ... ok\ntest_cust002_two_time_cutoff_and_success_claim (test_audit.AuditCases.test_cust002_two_time_cutoff_and_success_claim) ... ok\ntest_cust003_tombstone_retained_and_full_verification (test_audit.AuditCases.test_cust003_tombstone_retained_and_full_verification) ... ok\ntest_cust004_replica_and_decoy (test_audit.AuditCases.test_cust004_replica_and_decoy) ... ok\ntest_cust005_stop_flows_block_restore_before_records (test_audit.AuditCases.test_cust005_stop_flows_block_restore_before_records) ... ok\ntest_real_structured_79_coverage (test_audit.AuditCases.test_real_structured_79_coverage) ... ok\ntest_retained_missing_and_unknown_period_block (test_audit.AuditCases.test_retained_missing_and_unknown_period_block) ... ok\ntest_reused_resource_with_foreign_subject_is_not_merged (test_audit.AuditCases.test_reused_resource_with_foreign_subject_is_not_merged) ... ok\ntest_secondary_identifier_category_not_service_prefix (test_audit.AuditCases.test_secondary_identifier_category_not_service_prefix) ... ok\ntest_shared_phone_without_independent_identity_does_not_establish_ownership (test_audit.AuditCases.test_shared_phone_without_independent_identity_does_not_establish_ownership) ... ok\ntest_missing_slots_penalize_every_field (test_core.EvaluationTests.test_missing_slots_penalize_every_field) ... ok\ntest_email_collision_blocks (test_core.FactsTests.test_email_collision_blocks) ... ok\ntest_future_identity_and_history_excluded (test_core.FactsTests.test_future_identity_and_history_excluded) ... ok\ntest_no_substring_or_name_join (test_core.FactsTests.test_no_substring_or_name_join) ... ok\ntest_normalization_does_not_invent_aliases (test_core.FactsTests.test_normalization_does_not_invent_aliases) ... ok\ntest_old_alias_retains_raw_provenance (test_core.FactsTests.test_old_alias_retains_raw_provenance) ... ok\ntest_two_time_cutoff_and_missing_null (test_core.FactsTests.test_two_time_cutoff_and_missing_null) ... ok\ntest_activity_original_rows_survive_time_sort (test_core.InputsTests.test_activity_original_rows_survive_time_sort) ... ok\ntest_csv_boundary (test_core.InputsTests.test_csv_boundary) ... ok\ntest_manifest_escape_and_symlink (test_core.InputsTests.test_manifest_escape_and_symlink) ... ok\ntest_real_inputs_and_historical_resolution (test_core.InputsTests.test_real_inputs_and_historical_resolution) ... ok\ntest_timestamps_require_zone (test_core.InputsTests.test_timestamps_require_zone) ... ok\ntest_fresh_location_denied_tools_and_recorded_usage (test_core.RuntimeTests.test_fresh_location_denied_tools_and_recorded_usage) ... ok\ntest_oversized_or_invalid_jobs_fail_before_calls (test_core.RuntimeTests.test_oversized_or_invalid_jobs_fail_before_calls) ... ok\ntest_structured_intent_validation (test_core.RuntimeTests.test_structured_intent_validation) ... ok\ntest_timed_out_client_preserves_session_and_recovers_usage (test_core.RuntimeTests.test_timed_out_client_preserves_session_and_recovers_usage) ... ok\ntest_all_original_sql_and_replica_drift (test_core.SQLTests.test_all_original_sql_and_replica_drift) ... ok\ntest_invalid_or_open_transaction_is_not_absence (test_core.SQLTests.test_invalid_or_open_transaction_is_not_absence) ... ok\ntest_sql_filesystem_and_extension_operations_denied (test_core.SQLTests.test_sql_filesystem_and_extension_operations_denied) ... ok\ntest_atomic_failure_preserves_existing_output (test_core.StepsTests.test_atomic_failure_preserves_existing_output) ... ok\ntest_canonical_risk_before_record_order_and_blank_future_citations (test_core.StepsTests.test_canonical_risk_before_record_order_and_blank_future_citations) ... ok\ntest_complete_and_unauthorized_contracts (test_core.StepsTests.test_complete_and_unauthorized_contracts) ... ok\ntest_malformed_fields_types_operations_and_citations_rejected (test_core.StepsTests.test_malformed_fields_types_operations_and_citations_rejected) ... ok\ntest_string_order_and_byte_determinism (test_core.StepsTests.test_string_order_and_byte_determinism) ... ok\ntest_integer_matrix_comparator_and_cli (test_evaluator.EvaluatorBoundaryTests.test_integer_matrix_comparator_and_cli) ... ok\ntest_missing_spurious_and_citation_penalties (test_evaluator.EvaluatorBoundaryTests.test_missing_spurious_and_citation_penalties) ... ok\ntest_embedded_future_observation_is_not_eligible (test_extraction.ExtractionScopeTests.test_embedded_future_observation_is_not_eligible) ... ok\ntest_empty_declared_sql_scope_proves_no_collection_absence (test_extraction.ExtractionScopeTests.test_empty_declared_sql_scope_proves_no_collection_absence) ... ok\ntest_empty_model_business_scan_is_not_absence (test_extraction.ExtractionScopeTests.test_empty_model_business_scan_is_not_absence) ... ok\ntest_missing_retained_readback_and_boolean_counts (test_extraction.ExtractionScopeTests.test_missing_retained_readback_and_boolean_counts) ... ok\ntest_observed_control_labels_not_workflow_health (test_extraction.ExtractionScopeTests.test_observed_control_labels_not_workflow_health) ... ok\ntest_reused_trace_does_not_carry_another_lookup_subject (test_extraction.ExtractionScopeTests.test_reused_trace_does_not_carry_another_lookup_subject) ... ok\ntest_ambiguous_case_does_not_discard_other_valid_intents (test_usage.UsageTests.test_ambiguous_case_does_not_discard_other_valid_intents) ... ok\ntest_cumulative_and_cached_records_not_double_counted (test_usage.UsageTests.test_cumulative_and_cached_records_not_double_counted) ... ok\ntest_missing_is_not_zero_and_counts_are_strict (test_usage.UsageTests.test_missing_is_not_zero_and_counts_are_strict) ... ok\n\n----------------------------------------------------------------------\nRan 49 tests in 11.698s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "code/main.py",
+        "--check-inputs"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"run_id\": \"ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056\",\n  \"requests\": 518,\n  \"manifest_artifacts\": 94,\n  \"hashed_prediction_inputs\": 100,\n  \"sql_snapshots\": [\n    {\n      \"file_id\": \"evidence_05\",\n      \"tables\": 2,\n      \"rows\": 61\n    },\n    {\n      \"file_id\": \"evidence_10\",\n      \"tables\": 2,\n      \"rows\": 59\n    },\n    {\n      \"file_id\": \"evidence_15\",\n      \"tables\": 2,\n      \"rows\": 49\n    },\n    {\n      \"file_id\": \"evidence_20\",\n      \"tables\": 2,\n      \"rows\": 63\n    },\n    {\n      \"file_id\": \"evidence_24\",\n      \"tables\": 2,\n      \"rows\": 50\n    },\n    {\n      \"file_id\": \"evidence_29\",\n      \"tables\": 3,\n      \"rows\": 85\n    },\n    {\n      \"file_id\": \"evidence_33\",\n      \"tables\": 3,\n      \"rows\": 89\n    },\n    {\n      \"file_id\": \"evidence_38\",\n      \"tables\": 3,\n      \"rows\": 85\n    },\n    {\n      \"file_id\": \"evidence_43\",\n      \"tables\": 2,\n      \"rows\": 51\n    },\n    {\n      \"file_id\": \"evidence_47\",\n      \"tables\": 2,\n      \"rows\": 49\n    },\n    {\n      \"file_id\": \"evidence_52\",\n      \"tables\": 2,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_54\",\n      \"tables\": 2,\n      \"rows\": 7\n    },\n    {\n      \"file_id\": \"evidence_57\",\n      \"tables\": 1,\n      \"rows\": 3\n    },\n    {\n      \"file_id\": \"evidence_63\",\n      \"tables\": 9,\n      \"rows\": 24\n    },\n    {\n      \"file_id\": \"evidence_66\",\n      \"tables\": 9,\n      \"rows\": 31\n    },\n    {\n      \"file_id\": \"evidence_69\",\n      \"tables\": 9,\n      \"rows\": 26\n    },\n    {\n      \"file_id\": \"evidence_72\",\n      \"tables\": 9,\n      \"rows\": 28\n    },\n    {\n      \"file_id\": \"evidence_75\",\n      \"tables\": 9,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_78\",\n      \"tables\": 9,\n      \"rows\": 26\n    },\n    {\n      \"file_id\": \"evidence_81\",\n      \"tables\": 9,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_84\",\n      \"tables\": 9,\n      \"rows\": 34\n    },\n    {\n      \"file_id\": \"evidence_87\",\n      \"tables\": 9,\n      \"rows\": 27\n    },\n    {\n      \"file_id\": \"evidence_90\",\n      \"tables\": 9,\n      \"rows\": 1\n    },\n    {\n      \"file_id\": \"evidence_93\",\n      \"tables\": 9,\n      \"rows\": 25\n    }\n  ],\n  \"full_solver_ready\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "code/main.py"
+      ],
+      "exit": 2,
+      "stdout": "{\"run_id\": \"ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056\", \"execution_id\": \"final-6bcb0ed9-bbcd-4b0b-adcf-9c83c8f8da80\", \"attempted\": 518, \"defensible\": 75, \"unresolved\": 443, \"finalized\": false, \"metadata\": \"/tmp/opencode/ghost-package-rz2o19qe/artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/final-6bcb0ed9-bbcd-4b0b-adcf-9c83c8f8da80/run.json\"}\n",
+      "stderr": ""
+    }
+  ],
+  "cache_scope": "Only current-run validated external cache; not a cold-provider reproducibility claim"
+}

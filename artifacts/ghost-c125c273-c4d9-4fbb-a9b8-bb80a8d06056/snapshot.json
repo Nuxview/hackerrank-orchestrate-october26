@@ -1,0 +1,69 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "created_at": "2026-10-25T07:22:19.586322+00:00",
+  "status": "NEEDS_MANAGER",
+  "cycle": 1,
+  "manager_plan_revision": 1,
+  "baseline_commit": "0eddbbd33f682eae0a2770d67412af8a3cf4af20",
+  "implementation_files": {
+    "README.md": "b021185b9ac8b8dec2eb696924f00a67a5f2989e5d32967827f45bc10c07796d",
+    "code/evaluation/evaluation_report.md": "a0a7abd121d2aa7386ddc2f08037f21f956175102e02208c921dd9ce732cd538",
+    "code/evaluation/main.py": "f705f14a8aafcfe2d5a594d02f1268b4acb72e5ee0075ad662e16d6cc46196fa",
+    "code/evaluation/usage_report.md": "7dccf705479aef727c805e998c57ef558fde3cc0859c362fce5bfdfe94257d57",
+    "code/facts.py": "c217c82ee20d2ab093161ad51a59b1a9b1ebee33da37d4b2e6c2df6519ebd9dd",
+    "code/inputs.py": "2ed77f55e18d29a68c6331c5df8616ab6c9552d43e723cc4b83746894add02b1",
+    "code/main.py": "57d4f959622118ef7fcc656414903b5eb300ba7e97ec062b53385dac85913b3c",
+    "code/runtime/intent.md": "ba56d1e1fe51079d621d15b1333a21e73011fc7cb9bff62b70b8653206e55b59",
+    "code/runtime/opencode.json": "0460a8d50b0bf0d541a268aec7012bccf271510712477321819af8213f1727e3",
+    "code/runtime/smoke.py": "161d30238df2caa15acb014ca558289b347b79682a2a56afbc72e0462acde85a",
+    "code/sql_snapshot.py": "f917512f3e9d0a2ce363638472a8519c7172e39e5476fc4c1eb39472c00242dc",
+    "code/steps.py": "28c522792dd688613c078fe9d7ba6538f8ba02926a97e8906183090166a1f4ee",
+    "code/tests/test_core.py": "bc53786cb03dfc2cab6ca85f84ef939a99421b69d47c28c4a9457b10719d926f",
+    "code/transport.py": "02aef4ac15b50f0726ff92ed38ad5dc4396b4184c6f40a4b7724cfec8d91f8ed"
+  },
+  "implementation_sha256": "159acb3685167e766e7b5e606f5f5d8b2ff6e8d0450b0e2b355dfef71ba69cd4",
+  "original_dataset_sha256": "9fe321bd9167a5f6b831eff96b5d211c7b9c69ab4811fd88a636c4a5e31ca497",
+  "unchanged_instruction_files": {
+    "AGENTS.md": "559446bcb3cebbedae90deb0931545b10ca5469266acde856b7cc7a011f09afe",
+    "agent_trace_instructions.md": "51acd5ed499c3071e7987c1f8a17d6dd643afd1e5fdab4da8a024ea7bc5f63a5",
+    "problem_statement.md": "dd478250158b4fe387159ea924493e2dda0404edbbb585c92d9f9bb25237156b"
+  },
+  "artifact_files": {
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/checks.json": "6ff805dc90ba36bb88d5ebaf3335278258a8bc1ea68d3197c49dcfa68f5454a4",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/containment-mcp.json": "73e7a8ac8dd2544243c66e4fb02491603011d7b2137b340aae242e333ececd71",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/containment-plugin.json": "d9ef8827b4439e6dad76065828085cefc40551f1b3a3af107b9f9625c1888243",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/containment-skill.json": "73e7a8ac8dd2544243c66e4fb02491603011d7b2137b340aae242e333ececd71",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/isolated-image-intent-smoke-2.json": "a9c888e6a209499c7d5a71766a41a1c6c17498edf250223f519babc4ce95b17c",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/isolated-image-intent-smoke.json": "6216d7c1d040ab492cf6812789e155e8d33db6526c290289beedc90d33daaa52",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/runtime-config-sources.json": "f2bf1a4d1fc0cc993fb9cc504b89cd27353dc0b00bfc5f03c2f7aee4c9ffa1dd",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/runtime-effective-agent.json": "4391f628ef4b57e93713b761a66610ea6918fad0e4b55cef69a403324c68e6be",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/runtime-spike-export.json": "7de8e7c73433fc5456088892fb0ce287eccc1d07e1a75100eda3538304720d33",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/runtime-spike-isolated.json": "6b98e81ceb5bc9500522e27d7659cb0042b940673446a41532ad667a0cd03723",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/runtime-spike-pwd.json": "83de9f992c9eca42b3cd30fe84e9f0fb57fdfaec2703d23f1151c9dfcac642d0",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/runtime-spike-session.json": "54099f87eda8a6303bd6f85d283403fbe0912022460b4779dc5cd77e0137de3c",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/runtime-spike.json": "2ac6c436a6a8e95d141155ae024849e39a7922352c7db39cddd429dcc12461fa",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/ses_e8e1bff5cffecFAvTroWiYHDBP.json": "8b4d5d002cf3ea80d450653beeceded61d3dfdd504a41d582d11ef34ca79c094",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/ses_e8e2286d5ffeh6CuhsKs2A6O9z.json": "7de8e7c73433fc5456088892fb0ce287eccc1d07e1a75100eda3538304720d33",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/ses_e8e232e91ffeR9f5seQBXHOLMj.json": "5db24242a1e51db894f873083cd6c11275ab6d38a0a382da6eafcdde96adc1f6",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/ses_e8e2456dbffexVNRJaTM28qx3g.json": "efc9f713a96f797a208b7cf5b957ab5259b785cb8b066271e0f52859b3215657",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/session-allowlist.json": "21ceaeedd90d899bc0e129c94f60dd75abf5875c2e448e890d5b66f98dea0e6e",
+    "artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/synthetic-attachment.png": "3cb0a236baaa94e55e149a4702e2266ec8500f86a76ebf3b5f6d143f2e282ca7"
+  },
+  "artifact_sha256": "8d4e02684b444b2093489d5a0160f0e360eb801a2e22a86e5ed5d37776590ad5",
+  "output_sha256": null,
+  "archive_sha256": null,
+  "final_run_id": null,
+  "runtime_model": "openai/gpt-6.1-sol",
+  "pricing_catalog_observation": {
+    "observed_on": "2026-10-25",
+    "cost": []
+  },
+  "fingerprint_exclusions": [
+    "memories",
+    "log.txt",
+    ".opencode",
+    "artifacts",
+    "__pycache__"
+  ],
+  "finalization": "No final output or archive; full pipeline and acceptance incomplete"
+}

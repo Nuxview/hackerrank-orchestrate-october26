@@ -1,0 +1,24 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "sources": [
+    {
+      "type": "document",
+      "path": "/home/pierce/.config/opencode/opencode.jsonc",
+      "context_fields": {
+        "plugins": [
+          "@dietrichgebert/ponytail"
+        ]
+      }
+    },
+    {
+      "type": "directory",
+      "path": "/home/pierce/.config/opencode",
+      "context_fields": {}
+    },
+    {
+      "type": "document",
+      "path": "/tmp/opencode/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056-nnib2w94/opencode.json",
+      "context_fields": {}
+    }
+  ]
+}
