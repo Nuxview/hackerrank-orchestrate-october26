@@ -12,6 +12,15 @@ from transport import CONFIG,MODEL,RUN_ID,RuntimeFailure
 
 
 class InterpretationCacheTests(unittest.TestCase):
+    def test_offline_cache_miss_never_invokes_provider(self):
+        with tempfile.TemporaryDirectory() as directory:
+            jobs=AIJobs(directory,"offline-fixture",offline=True)
+            with patch("ai.invoke",side_effect=AssertionError("No external calls permitted")):
+                with self.assertRaisesRegex(RuntimeFailure,"Offline mode"):
+                    jobs.request("uncached source","custom",{},lambda response:response)
+            self.assertEqual(jobs.events[0]["attempt_records"],[])
+            self.assertFalse(jobs.events[0]["cache_hit"])
+
     def test_same_run_identical_source_revalidated_without_new_call(self):
         with tempfile.TemporaryDirectory(dir="/tmp/opencode" if Path("/tmp/opencode").is_dir() else None) as directory:
             base=Path(directory)
@@ -22,7 +31,7 @@ class InterpretationCacheTests(unittest.TestCase):
             def validate(response):
                 if response!={"value":7}:raise RuntimeFailure("wrong fixture")
                 return response
-            jobs=AIJobs(base,"new-execution")
+            jobs=AIJobs(base,"new-execution",offline=True)
             with patch("ai.invoke",side_effect=AssertionError("Must not call provider")):
                 self.assertEqual(jobs.request("fixture prompt","custom",{},validate),{"value":7})
             self.assertTrue(jobs.events[0]["cache_hit"])

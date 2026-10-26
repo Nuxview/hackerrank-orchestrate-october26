@@ -9,12 +9,13 @@ from transport import CONFIG, MODEL, RUN_ID, RuntimeFailure, invoke, validate_in
 
 
 class AIJobs:
-    def __init__(self, directory, execution_id):
+    def __init__(self, directory, execution_id, offline=False):
         self.directory = Path(directory)
         self.directory.mkdir(parents=True, exist_ok=True)
         self.execution_id = execution_id
         self.events = []
         self.provider_unavailable = False
+        self.offline = offline
 
     def request(self, prompt, stage, context, validate, attachment=None):
         parser_bytes = b"".join(Path(__file__).with_name(name).read_bytes() for name in ["ai.py","extract.py","transport.py"])
@@ -49,6 +50,10 @@ class AIJobs:
             result = validate(data["response"])
             event.update(cache_hit=True, attempt_records=data["attempt_records"])
         else:
+            if self.offline:
+                event.update(error="Offline mode: no matching validated model response",cache_hit=False,attempt_records=[])
+                self._record(event)
+                raise RuntimeFailure(event["error"])
             if self.provider_unavailable:
                 event.update(error="Provider usage limit already observed in this execution",cache_hit=False,attempt_records=[])
                 self._record(event)

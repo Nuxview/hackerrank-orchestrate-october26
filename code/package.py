@@ -4,6 +4,7 @@ import hashlib
 import io
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -43,14 +44,17 @@ def build():
                 checks.append(dict(command=args,exit=result.returncode,stdout=result.stdout,stderr=result.stderr))
                 if result.returncode:raise RuntimeError("Extracted candidate component check failed: "+result.stderr)
             if (BASE/"latest-final.json").exists():
-                # Reproduce using this run's external validated facts/model responses, not bundled caches.
-                primary_pointer=(BASE/"latest-final.json").read_bytes()
-                prior=json.loads((BASE/json.loads(primary_pointer)["path"]).read_text())
-                (extracted/"artifacts").symlink_to(ROOT/"artifacts",target_is_directory=True)
-                result=subprocess.run([sys.executable,"-B","code/main.py"],cwd=extracted,text=True,capture_output=True,timeout=180)
-                checks.append(dict(command=[sys.executable,"-B","code/main.py"],exit=result.returncode,stdout=result.stdout,stderr=result.stderr))
-                now=json.loads((BASE/json.loads((BASE/"latest-final.json").read_text())["path"]).read_text())
-                write_atomic(BASE/"latest-final.json",primary_pointer)
+                # Replay in an independent cache copy: never mutate the user's run or spend credits.
+                prior=json.loads((BASE/json.loads((BASE/"latest-final.json").read_text())["path"]).read_text())
+                replay=extracted/"artifacts"/RUN_ID
+                replay.mkdir(parents=True)
+                shutil.copytree(BASE/"jobs",replay/"jobs")
+                for name in ["preprocessing-current.json",prior["preprocessing_snapshot"]]:
+                    shutil.copy2(BASE/name,replay/name)
+                command=[sys.executable,"-B","code/main.py","--offline"]
+                result=subprocess.run(command,cwd=extracted,text=True,capture_output=True,timeout=180)
+                checks.append(dict(command=command,exit=result.returncode,stdout=result.stdout,stderr=result.stderr))
+                now=json.loads((replay/json.loads((replay/"latest-final.json").read_text())["path"]).read_text())
                 assert prior["defensible_output_sha256"]==now["defensible_output_sha256"]
                 assert prior["unresolved"]==now["unresolved"]
                 assert result.returncode==(0 if prior["finalized"] else 2)

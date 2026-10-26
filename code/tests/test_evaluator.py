@@ -25,6 +25,15 @@ def rows(numbers):
 
 
 class EvaluatorBoundaryTests(unittest.TestCase):
+    def test_unresolved_cases_are_included_in_full_sample_denominators(self):
+        expected=rows([1])+[dict(rows([1])[0],case_id="unresolved")]
+        r=metrics.compare(expected,rows([1]),allow_missing=True)
+        self.assertEqual((r["cases"],r["predicted_cases"],r["missing_cases"]),(2,1,1))
+        self.assertEqual((r["status_correct"],r["sequence_correct"]),(1,1))
+        self.assertEqual((r["field_correct"],r["field_denominator"],r["step_fn"]),(7,14,1))
+        with self.assertRaises(InputError):metrics.compare(expected,rows([1]))
+        with self.assertRaises(InputError):metrics.compare(rows([1]),expected,allow_missing=True)
+
     def test_integer_matrix_comparator_and_cli(self):
         bad = [[True], [False], [1.0], ["1"], [0], [-1], [2], [1,1], [1,3],
                [1,True,3], [1,False,3], [1,2,True], [1,2,False], [1,2.0,3], [1,"2",3]]

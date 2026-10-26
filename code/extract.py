@@ -155,7 +155,8 @@ class Extractor:
             if collection=="support_conversations":data["_shared_context"]=True
             if collection=="ticket_attachments":data["_subject_only"]=True
             self.add(manifest,system,row["resource_id"],category,data,f"{location}[{index}]",
-                     observed=row.get("observed_at") or row.get("recorded_at"),snapshot=snapshot,copy=copy,state=state)
+                     observed=max((timestamp(row[k]) for k in ["observed_at","recorded_at","updated_at"] if row.get(k)),
+                                  default=timestamp(snapshot)),snapshot=snapshot,copy=copy,state=state)
         if closed:
             self.add(manifest,system,"",category,dict(members=members,_closed=True),location,snapshot=snapshot,copy=copy,kind="scope",state="SCOPE")
 
@@ -172,7 +173,7 @@ class Extractor:
             for index,s in enumerate(data["snapshots"]):
                 merged[(s["data_store"],s["collection"],s["captured_at"])].extend(s["records"])
             for (system,collection,time),rows in merged.items():
-                self.records(manifest,system,collection,rows,f"snapshots/{system}/{collection}",max(snapshot,time))
+                self.records(manifest,system,collection,rows,f"snapshots/{system}/{collection}",max((snapshot,time),key=timestamp))
         elif "service_exports" in data:
             for system,collections in data["service_exports"].items():
                 for collection,rows in collections.items():self.records(manifest,system,collection,rows,"service_exports/"+system+"/"+collection,snapshot,closed=False)
@@ -335,7 +336,19 @@ class Extractor:
                         raise RuntimeFailure("Uncorroborated document identifier")
             return response
         response=self.jobs.request(prompt,"preprocessing",dict(artifact_ids=[manifest["file_id"]]),validate,attachment)
-        for i,row in enumerate(response["records"]):
+        records=list(response["records"])
+        if path.suffix==".pdf" and "Attachment properties and upload history" in source:
+            documents=[r for r in records if r["category"]=="SUPPORT_MESSAGE" and r["resource_id"]]
+            uploads=[r for r in records if r["category"]=="SUPPORT_ATTACHMENT" and r["resource_id"] is None]
+            if len(documents)==len(uploads)==1:
+                document,upload=documents[0],uploads[0]
+                if (document["system_id"]==upload["system_id"]=="support_platform"
+                        and document["business_key"] and document["business_key"]==upload["fields"].get("ticket")):
+                    # The upload metadata describes this document, not a separate conversation record.
+                    combined=dict(upload,resource_id=document["resource_id"],fields=dict(document["fields"],**upload["fields"]))
+                    combined["fields"]["_container_identifier_source"]=dict(page=document["page"],quote=document["quote"])
+                    records=[r for r in records if r is not document and r is not upload]+[combined]
+        for i,row in enumerate(records):
             fields=dict(row["fields"],_business_key=row["business_key"],_quote=row["quote"])
             corroboration={}
             if attachment:
@@ -349,7 +362,10 @@ class Extractor:
             fields["_corroboration_required"]=corroboration
             fields["_extraction_uncertainties"]=response["uncertainties"]
             if row["category"]=="SUPPORT_ATTACHMENT":fields["_subject_only"]=True
-            self.add(manifest,row["system_id"],row["resource_id"] or "",row["category"],fields,f'page {row["page"]} record {i}')
+            location=f'page {row["page"]} record {i}'
+            if fields.get("_container_identifier_source"):
+                location+=f'; identifier on page {fields["_container_identifier_source"]["page"]}'
+            self.add(manifest,row["system_id"],row["resource_id"] or "",row["category"],fields,location)
 
     def run(self,structured_only=False):
         for row in self.tables["evidence_files.csv"]:

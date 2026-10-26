@@ -32,8 +32,8 @@ def generate():
     if sample:
         metrics=json.loads(sample_path.with_name("metrics.json").read_text())
         n=metrics["cases"]
-        evaluation += [f"## Public samples: {sample['requests']} attempted, {n} defensible, {sample['unresolved']} unresolved",
-            "Unresolved rows are NOT silently counted as correct or fabricated. The metrics below apply only to the stated defensible subset, not all 32 samples.",
+        evaluation += [f"## Public samples: {sample['requests']} attempted, {sample['defensible']} defensible, {sample['unresolved']} unresolved",
+            "All public cases are included in the metric denominators. Unresolved rows count as incorrect/missing predictions; no answer is fabricated to fill them.",
             f"- Status accuracy: {metrics['status_correct']}/{n}.",
             f"- Exact ordered sequence accuracy: {metrics['sequence_correct']}/{n}.",
             f"- Whole-row exact accuracy: {metrics['whole_row_correct']}/{n}.",
@@ -48,7 +48,7 @@ def generate():
             if d["status"] is None:evaluation.append(f"- {d['case_id']}: "+"; ".join(d["diagnostics"]))
     else:evaluation += ["Public metrics N/A: no sample attempt metadata exists."]
     evaluation += ["","## Metric definitions and evaluator repair",
-        "Status and exact-sequence denominators are the defensible subset explicitly stated above. Step matching ignores step_no only; all other six fields including evidence must match. Fields align by phase/system/resource/local occurrence, with seven errors for each missing/spurious slot. Sequence and whole-row checks preserve array order and integer types. AUD-004 boolean, float, string, negative, duplicate and gap numbering fixtures now fail through comparator and CLI; valid fixtures, missing/spurious penalties and changed-citation 6/7 penalty pass. Auditor verification remains requested.",
+        "Status and exact-sequence denominators include every public sample, including unresolved cases. Step matching ignores step_no only; all other six fields including evidence must match. Fields align by phase/system/resource/local occurrence, with seven errors for each missing/spurious slot. Missing cases have no predicted steps and their expected steps contribute false negatives. Sequence and whole-row checks preserve array order and integer types. AUD-004 boolean, float, string, negative, duplicate and gap numbering fixtures now fail through comparator and CLI; valid fixtures, missing/spurious penalties and changed-citation 6/7 penalty pass. Auditor verification remains requested.",
         "","## Independent integrated custom cases (source fixtures, not sample labels)",
         "Executed with `python3 -B -m unittest discover -s code/tests -v`; see code/tests/test_audit.py.",
         "Additionally `python3 -B code/evaluation/custom.py` executes CUST-001–003 through real AI intent interpretation, synthetic JSON-file extraction, the same AuditEngine, and strict serialization checks. Its run-local custom-evaluation.json records actual versus expected tuples: three cases passed. Requests are respectively ‘Remove promotional emails only. Keep my account and invoices.’, ‘Please delete my account and personal data.’, and ‘Delete my account, but preserve records lawfully required.’. This is not a public/hidden accuracy claim.",
@@ -64,13 +64,15 @@ def generate():
         evaluation += ["",f"## Target attempt: {final['requests']} processed; {final['defensible']} defensible; {final['unresolved']} unresolved",
             f"Execution `{final['execution_id']}`; output hash `{final['output_sha256']}`; finalized={final['finalized']}.",
             "Hidden target accuracy is unavailable. Root output is written only if every row is defensible; a run-local defensible subset is NOT a submission."]
+        if final.get("preserved_output_sha256"):
+            evaluation += [f"An older root output.csv was preserved with SHA-256 `{final['preserved_output_sha256']}`. It is NOT this execution's finalized output."]
     coverage=(final or sample or {}).get("coverage",[])
     if coverage:
         evaluation += ["","## Artifact coverage",f"{len(coverage)} manifest entries; {sum(not r.get('error') for r in coverage)} extraction successes; {sum(bool(r.get('error')) for r in coverage)} explicit failures."]
         for r in coverage:
             if r.get("error"):evaluation.append(f"- {r['file_id']}: {r['error']}")
     evaluation += ["","## Failures and improvements",
-        "Fixed type-insensitive evaluator equality; preserved strict input, SQL and atomic-write gates. Added actual adapters, scoped facts, trace correlation, deterministic policies/plans, model interpretation and per-case diagnostics. Business interpretation and resource-link completeness remain audit concerns: for example support_001 currently yields separate message/attachment interpretations rather than a fully reconciled container record, and analytics_9406 has no established subject link in the current graph. These are not declared dataset defects or accepted label exceptions. ‘Defensible’ means passed the current engine guards, not independently verified. Business OCR/model uncertainties and missing retention/canonical-resource/as-of support remain blockers instead of fabricated absent/COMPLETE states. Passing fixtures does not resolve every real source ambiguity. Candidate packaging is not final acceptance."]
+        "Fixed type-insensitive evaluator equality; preserved strict input, SQL and atomic-write gates. Added actual adapters, scoped facts, trace correlation, deterministic policies/plans, model interpretation and per-case diagnostics. Post-submission repairs include JSON updated_at cutoffs, timezone-aware snapshot comparison, explicit human-readable retention deadlines, source-backed serialization proof checks, full-sample metric denominators and no-provider offline replay. PDF attachment properties now reconcile a sole document body and sole upload record only when their support ticket keys match; differing tickets remain distinct. Resource-link completeness remains an audit concern: analytics_9406 has no established subject link in the current graph. These are not declared dataset defects or accepted label exceptions. ‘Defensible’ means passed the current engine guards, not independently verified. Business OCR/model uncertainties and missing retention/canonical-resource/as-of support remain blockers instead of fabricated absent/COMPLETE states. Passing fixtures does not resolve every real source ambiguity. Candidate packaging is not final acceptance."]
     Path(__file__).with_name("evaluation_report.md").write_text("\n".join(evaluation)+"\n",encoding="utf-8")
 
     records=[json.loads(p.read_text()) for p in (BASE/"jobs").glob("job-*.json")]

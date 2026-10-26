@@ -12,10 +12,11 @@ from steps import FIELDS, HEADER, validate_structure
 from transport import ROOT, RUN_ID
 
 
-def compare(expected, predicted):
+def compare(expected, predicted, allow_missing=False):
     truth = {r["case_id"]: r for r in expected}
     actual = {r["case_id"]: r for r in predicted}
-    if len(truth) != len(expected) or len(actual) != len(predicted) or set(truth) != set(actual):
+    if (len(truth) != len(expected) or len(actual) != len(predicted)
+            or not set(actual).issubset(truth) or not allow_missing and set(truth) != set(actual)):
         raise InputError("Sample prediction IDs must match exactly once")
     confusion = Counter()
     fields = Counter()
@@ -32,18 +33,18 @@ def compare(expected, predicted):
         return result
 
     for case in sorted(truth):
-        a, b = truth[case], actual[case]
-        left, right = json.loads(a["steps_json"]), json.loads(b["steps_json"])
+        a, b = truth[case], actual.get(case)
+        left, right = json.loads(a["steps_json"]), json.loads(b["steps_json"]) if b else []
         validate_structure(left)
         validate_structure(right)
-        if any(r["deletion_status"] not in {"COMPLETE", "INCOMPLETE", "NOT_APPLICABLE"} for r in [a,b]):
+        if any(r["deletion_status"] not in {"COMPLETE", "INCOMPLETE", "NOT_APPLICABLE"} for r in [a,b] if r):
             raise InputError("Invalid evaluation status")
-        same_status = a["deletion_status"] == b["deletion_status"]
-        same_sequence = left == right
+        same_status = b is not None and a["deletion_status"] == b["deletion_status"]
+        same_sequence = b is not None and left == right
         status += same_status
         sequence += same_sequence
         whole_row += same_status and same_sequence
-        confusion[(a["deletion_status"], b["deletion_status"])] += 1
+        confusion[(a["deletion_status"], b["deletion_status"] if b else "UNRESOLVED")] += 1
         lc = Counter(json.dumps({k:v for k,v in s.items() if k != "step_no"}, sort_keys=True) for s in left)
         rc = Counter(json.dumps({k:v for k,v in s.items() if k != "step_no"}, sort_keys=True) for s in right)
         tp += sum((lc & rc).values())
@@ -64,7 +65,7 @@ def compare(expected, predicted):
                                 "predicted": None if index is None or index >= len(right) else right[index]})
     precision = tp / (tp+fp) if tp+fp else None
     recall = tp / (tp+fn) if tp+fn else None
-    return dict(run_id=RUN_ID, cases=len(truth), status_correct=status,
+    return dict(run_id=RUN_ID, cases=len(truth), predicted_cases=len(actual), missing_cases=len(truth)-len(actual),status_correct=status,
                 sequence_correct=sequence, whole_row_correct=whole_row,
                 step_tp=tp, step_fp=fp, step_fn=fn, step_precision=precision,
                 step_recall=recall, step_f1=2*tp/(2*tp+fp+fn) if 2*tp+fp+fn else None,
@@ -77,22 +78,20 @@ def compare(expected, predicted):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--predictions", type=Path)
+    parser.add_argument("--offline",action="store_true",help="Use validated model responses only; never invoke a provider")
     args = parser.parse_args()
     run_metadata=None
     if args.predictions is None:
         from main import run
-        run_metadata,directory=run(sample=True)
+        run_metadata,directory=run(sample=True,offline=args.offline)
         args.predictions=directory/"defensible-output.csv"
     if not args.predictions.is_file():
         print("BLOCKED: no real sample-pipeline predictions exist; no accuracy is claimed.", file=sys.stderr)
         return 2
     predicted = read_csv(args.predictions, ",".join(HEADER))
     expected = read_csv(ROOT / "dataset" / "sample_output.csv", ",".join(HEADER))
-    if run_metadata is not None:
-        selected={r["case_id"] for r in predicted}
-        expected=[r for r in expected if r["case_id"] in selected]
     try:
-        measured=compare(expected,predicted)
+        measured=compare(expected,predicted,allow_missing=run_metadata is not None)
         if run_metadata is not None:
             measured.update(attempted=run_metadata["requests"],unresolved=run_metadata["unresolved"],
                             full_sample_finalized=run_metadata["finalized"])

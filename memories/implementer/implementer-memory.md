@@ -1,3 +1,26 @@
+# Implementer handoff — post-submission Codex continuation
+
+Date: 2026-10-25T20:22:40.631790+00:00
+run_id: `ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056`; manager plan revision 3 retained.
+Harness/model: Codex desktop app / `gpt-6.1-sol` (confirmed from current session metadata).
+
+**Status: BLOCKED / implementation not complete.** The user supplied this checkout and asked to finish existing required work before future improvements. The user confirms there is no additional organizer information for missing resource mappings or retention conditions. No manager/auditor finding is closed by this pass.
+
+Completed corrections: offline/no-provider replay across pipeline/evaluation/preprocessing; JSON update-time and timezone cutoff fixes; explicit business retention-date parsing; grounded PDF attachment-container reconciliation; source-backed serialization proof checks; all-public-case metric denominators; stale output warning; independent-copy offline archive replay. See `artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/completion-report.md` for details and source-gap examples.
+
+Verification: 56/56 unit tests; 3/3 cache-backed integrated custom cases; 94 artifacts / 3322 facts / no parser errors. Public status 2/32 and exact sequence 1/32, with 30 unresolved samples included in denominators. All 518 targets attempted; 75 pass current guards, 443 unresolved; exit 2, no finalized output. Tested 29-member archive replay preserves original run pointers. No new provider jobs (111 before/after). Original input hashes and historical 407-row submission unchanged.
+
+Current execution: `final-ca71ebf0-cc3d-4d91-9a69-c6feeb7b0b35`.
+Current archive SHA-256: `e22fb8d29b170127ced43866673c9a6b998501337d37bd9b7f037f0c53868050`.
+Exact checks: `artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/completion-checks.json`.
+Baseline preservation: `artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/submitted-baseline-20261025T195754Z.zip`.
+
+Remaining: source-backed account/anonymous-resource ownership and retention prerequisites, remaining business uncertainties/state conflicts and AUD-002 scope disposition. Some diagnostics may still be implementation limitations; they are not all declared dataset defects. Obtain an authoritative interpretation/evidence before claiming all-518 completion. Keep the original fresh run; do not restart or import old-case shortcuts. A future independent auditor can verify the concrete fixes without accepting the full candidate.
+
+---
+
+# Historical revision 3 handoff (retained below)
+
 # Implementer handoff — revision 3
 
 ## Run control / outcome

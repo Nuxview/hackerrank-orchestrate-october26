@@ -25,6 +25,28 @@ def fact(resource="account-fixture",system="account_service",category="USER_PROF
 
 
 class AuditCases(unittest.TestCase):
+    def test_business_retention_dates_are_parsed_without_guessing_missing_periods(self):
+        rules={r["data_category"]:r for r in RULES}
+        cutoff=timestamp(REQUEST["audit_at"])
+        for date in ["25 Aug 2027 04 03 UTC","25 Aug 2027 04:03 UTC","04 May 2033"]:
+            with self.subTest(date=date):
+                self.assertEqual(policy_action("SECURITY_AUDIT_LOG",dict(retention_until=date),cutoff,rules),"RETAIN")
+        for date in [None,"tomorrow","04 May 2020"]:
+            with self.subTest(date=date),self.assertRaises(InputError):
+                policy_action("SECURITY_AUDIT_LOG",dict(retention_until=date),cutoff,rules)
+
+    def test_output_proof_rechecks_source_state_resource_and_time(self):
+        source=fact()
+        engine=AuditEngine(TABLES,[source])
+        decision=engine.decide(REQUEST,True)
+        step=decision["steps"][0]
+        self.assertTrue(engine.supports(REQUEST,decision,step))
+        self.assertFalse(engine.supports(REQUEST,decision,dict(step,evidence_id="invented")))
+        self.assertFalse(engine.supports(REQUEST,decision,dict(step,resource_id="different-resource")))
+        payload=json.loads(source.payload_json);payload["_state"]="PRESENT"
+        self.assertFalse(AuditEngine(TABLES,[replace(source,payload_json=json.dumps(payload))]).supports(REQUEST,decision,step))
+        self.assertFalse(AuditEngine(TABLES,[replace(source,captured_at=timestamp("2026-04-11T00:00:00Z"))]).supports(REQUEST,decision,step))
+
     def test_shared_phone_without_independent_identity_does_not_establish_ownership(self):
         tables=dict(TABLES,**{"user_identities.csv":TABLES["user_identities.csv"]+[
             dict(TABLES["user_identities.csv"][0],user_id="user_other",email="other@example.test",email_hash="otherhash")]})

@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 from dataclasses import replace
+from datetime import datetime, timezone
 import json
 import re
 
@@ -9,6 +10,21 @@ from extract import EMAIL, keys_from
 from facts import Fact, normalize, resolve_identity
 from inputs import InputError, timestamp
 from steps import canonical_steps, validate_steps
+
+
+def retention_deadline(value):
+    """Business-document dates are source facts, not CSV timestamp syntax."""
+    try:
+        return timestamp(value)
+    except InputError:
+        for fmt in ["%d %b %Y %H %M UTC", "%d %b %Y %H:%M UTC", "%d %b %Y", "%Y-%m-%d"]:
+            try:
+                parsed=datetime.strptime(value,fmt).replace(tzinfo=timezone.utc)
+            except (ValueError,TypeError):
+                continue
+            # A date without a time cannot prove retention past that day's start.
+            return parsed
+        raise InputError("Unrecognized supplied retention deadline")
 
 
 def activity_facts(rows):
@@ -47,7 +63,7 @@ def policy_action(category,payload,cutoff,rules):
     elif category in {"SECURITY_AUDIT_LOG","LEGAL_HOLD_RECORD"}:
         end=payload.get("retention_until") or payload.get("retained_until")
         active=payload.get("legal_hold_active") if category=="LEGAL_HOLD_RECORD" else payload.get("_retention_confirmed")
-        if not (active is True or isinstance(end,str) and timestamp(end)>cutoff):
+        if not (active is True or isinstance(end,str) and retention_deadline(end)>cutoff):
             raise InputError("Supplied retention/hold period is not established as active")
     elif category=="BACKUP_ARCHIVE":
         if payload.get("_state") not in {"ACTIVE","BLOCKED"}:raise InputError("Restore controls are not established")
@@ -64,6 +80,37 @@ class AuditEngine:
         self.facts=list(facts)+activity_facts(tables.get("system_activity.csv",[]))
         self.coverage=list(coverage)
         self.rules={r["data_category"]:r for r in tables["deletion_rules.csv"]}
+
+    def supports(self,request,decision,step):
+        """Recheck serialized citations against source facts, not the generated text."""
+        cutoff=timestamp(request["audit_at"])
+        key="|".join(step[k] for k in ["phase","operation","system_id","resource_id"])
+        ids=set(decision.get("proof",{}).get(key,[]))
+        category=next((r["category"] for r in decision.get("resources",[])
+                       if (r["system_id"],r["resource_id"])==(step["system_id"],step["resource_id"])),None)
+        if category is None:return False
+        expected={"REPORT_REMAINING_RECORD":{"PRESENT","IDENTIFIABLE","REDACTED","ANONYMIZED"},
+            "REPORT_EXPOSED_PII":{"IDENTIFIABLE"},"REPORT_ACTIVE_DATA_FLOW":{"ACTIVE"},"REPORT_RESTORE_RISK":{"ACTIVE"},
+            "VERIFY_RECORD_ABSENT":{"ABSENT"},"VERIFY_RECORD_PRESENT":{"PRESENT","IDENTIFIABLE","REDACTED","ANONYMIZED"},
+            "VERIFY_RECORD_REDACTED":{"REDACTED"},"VERIFY_RECORD_ANONYMIZED":{"ANONYMIZED"},
+            "VERIFY_DATA_FLOW_DISABLED":{"DISABLED"},"VERIFY_RESTORE_BLOCKED":{"BLOCKED"}}.get(step["operation"],set())
+        for fact in self.facts:
+            if fact.fact_id not in ids or fact.evidence_id!=step["evidence_id"] or not fact.eligible(cutoff):continue
+            if fact.system_id not in {step["system_id"],"*"}:continue
+            data=json.loads(fact.payload_json)
+            if fact.claim_kind=="scope":
+                if (expected=={"ABSENT"} and data.get("_closed") and fact.category in {category,"*"}
+                        and isinstance(data.get("members"),list) and step["resource_id"] not in data["members"]):
+                    return True
+            elif fact.claim_kind=="observation" and data.get("_state") in expected:
+                if fact.resource_id==step["resource_id"]:return True
+                if not fact.resource_id:
+                    business={v for k,v in fact.subject_keys if k=="business_key"}
+                    if any(link.claim_kind=="identity_link" and link.eligible(cutoff)
+                           and link.system_id==step["system_id"] and link.resource_id==step["resource_id"]
+                           and business.intersection(v for k,v in link.subject_keys if k=="business_key")
+                           for link in self.facts):return True
+        return False
 
     def decide(self,request,authorized):
         result=dict(case_id=request["case_id"],authorized=authorized,diagnostics=[],resources=[],steps=[],status=None,proof={})

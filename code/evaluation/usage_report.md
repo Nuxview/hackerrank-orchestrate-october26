@@ -1,6 +1,6 @@
 # Usage and billing treatment — ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056
 
-Generated 2026-10-25T12:55:39.622577+00:00; plan revision 3; AUD-003 remains OPEN pending auditor verification.
+Generated 2026-10-25T20:19:09.861167+00:00; plan revision 3; AUD-003 remains OPEN pending auditor verification.
 
 ## Development coding sessions
 The user confirmed on 2026-10-25 that development GPT 6.1 Sol access through OpenCode uses ChatGPT subscription/sign-in. Actual attributable subscription cost is unmeasured: no $0 claim, API-charge claim or arbitrary subscription allocation is made. Coding-session telemetry, if captured in current-run development-usage.json, is cumulative per known session at its timestamp, not an additional runtime ledger or complete coverage of every development session.
@@ -31,8 +31,8 @@ These development counters are not added to runtime or reference-cost totals. Ac
 | final | 22 | 22 | 44013 | 20521 | 340 | 0 | 0 |
 
 ## Latest target-attempt attribution (not a finalized-output cost)
-Execution `final-fc426d06-e5d3-4d84-bf9e-0a3710a82c65`; 518 attempted requests. Deadline partial output (`output.csv`, 407/518 rows) SHA-256 `7a5ee2341d9c6341ccde64f6a28a1f5cae30a080a5d8962f7bb186a8196cebf7`; finalized=False, complete=False.
-Run metadata `artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/final-fc426d06-e5d3-4d84-bf9e-0a3710a82c65/run.json` records exact input/code/config/prompt hashes, preprocessing snapshot/hash and call/cache dependencies.
+Execution `final-ca71ebf0-cc3d-4d91-9a69-c6feeb7b0b35`; 518 attempted requests; output_sha256=`None`; finalized=False.
+Run metadata `artifacts/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056/final-ca71ebf0-cc3d-4d91-9a69-c6feeb7b0b35/run.json` records exact input/code/config/prompt hashes, preprocessing snapshot/hash and call/cache dependencies.
 Observed unique dependency records: 37; normalized counters `{"cache_read": 0, "cache_write": 0, "input": 96519, "input_plus_output": 124729, "model_calls": 37, "output": 28210, "reasoning": 1367, "sessions": 37}`.
 These dependencies count shared preprocessing once, including failed corrections, plus all target intent attempts. Raw session counters and per-assistant generation token metadata are retained side by side, but are NOT added to one another. Stream step counters are not also summed. Cached response references deduplicate by fresh session ID. Missing categories are null/unknown, never manufactured zeros. Model generation counts come from current-session assistant records; failed/unavailable metadata remains unknown.
 Session attempt counts include failed quota-rejected invocations. Observed generations are OpenCode assistant-record counts, not independently measured underlying HTTP retries. Transport-internal retry/maintenance overhead is not exposed and is not silently certified absent. Missing counters recovered through exact-ID session metadata are stored in usage-supplements.json; original raw job records are preserved unchanged.
@@ -46,7 +46,7 @@ For disjoint hypothetical quantities the reference formula is USD = (2 × uncach
 - Conditional reference: {"input_includes_cache": false, "output_includes_reasoning": true, "usd": "0.475138", "usd_per_attempted_target_request": "0.000917255"}
 - Conditional reference: {"input_includes_cache": false, "output_includes_reasoning": false, "usd": "0.488808", "usd_per_attempted_target_request": "0.000943645"}
 Attempt-workload arithmetic: input-plus-output counters 124729/518 = 240.790 tokens per attempted request, including selected shared preprocessing once. This is not a verified billable-token average or a finalized-output figure; reference USD/request above is rounded to nine decimals under each separate assumption.
-No complete/finalized 518-row output was produced; the root output is explicitly partial (407 rows, 111 omitted). Required finalized-output figures remain pending. Only the actual 518-target attempt, never smoke totals, supplies the explicitly labeled attempt denominator above. Deadline export made no additional model calls, so the attribution remains the same run's attempt workload.
+No final output exists unless finalized=true. Required finalized-output figures remain pending while rows are unresolved; only the actual 518-target attempt, never smoke totals, supplies the explicitly labeled attempt denominator above.
 
 ## Auditor request / remaining uncertainty
 Please independently verify AUD-003 against PS 150–158 / AG §6.8: exact run/output linkage, stage attribution, cumulative/session and generation counter mapping, retries/caches/missing telemetry, official reference assumptions and arithmetic, and whether the final reference estimate plus explicit unmeasured actual billing satisfies the required estimated-cost report. Selected runtime authentication/billing and OpenCode counter overlap remain precise unknowns; they do not gate unrelated implementation/evaluation. No finding is closed here.

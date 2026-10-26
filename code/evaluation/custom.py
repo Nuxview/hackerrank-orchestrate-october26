@@ -1,6 +1,7 @@
 """Three independent AI-intent -> JSON extraction -> planner -> serializer cases."""
 
 from dataclasses import replace
+import argparse
 import json
 from pathlib import Path
 import sys
@@ -16,7 +17,7 @@ from steps import validate_steps
 from transport import ROOT,RUN_ID
 
 
-def main():
+def main(offline=False):
     requests=[dict(case_id="CUST-001",email="a@example.test",request_text="Remove promotional emails only. Keep my account and invoices."),
               dict(case_id="CUST-002",email="b@example.test",request_text="Please delete my account and personal data."),
               dict(case_id="CUST-003",email="c@example.test",request_text="Delete my account, but preserve records lawfully required.")]
@@ -35,7 +36,7 @@ def main():
                 row("c","profile-c","account_service","USER_PROFILE","NOT_FOUND"),
                 row("c","journal-c","security_service","SECURITY_AUDIT_LOG","FOUND",retention_until="2030-01-01T00:00:00Z"),
                 row("c","stable-c","identity_service","ACCOUNT_TOMBSTONE","IDENTIFIABLE",account_status="DELETED",name=None,email=None,phone=None,email_hash="hash-c")]
-    jobs=AIJobs(BASE/"jobs","custom-r3")
+    jobs=AIJobs(BASE/"jobs","custom-r3",offline=offline)
     intents=jobs.intents(requests,"custom")
     with tempfile.TemporaryDirectory(prefix="ghost-custom-",dir="/tmp/opencode" if Path("/tmp/opencode").is_dir() else None) as directory:
         source=Path(directory)/"custom.json"
@@ -61,4 +62,7 @@ def main():
     print("PASS: 3 AI-intent/JSON-extraction/audit/serialization custom cases")
 
 
-if __name__=="__main__":main()
+if __name__=="__main__":
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--offline",action="store_true",help="Use validated model responses only; never invoke a provider")
+    main(offline=parser.parse_args().offline)

@@ -348,3 +348,77 @@ repo_root=/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
 worktree=main
 parent_agent=none
 
+
+## [2026-10-25T19:57:54.641316+00:00] SESSION START
+
+tool=Codex desktop app
+model=gpt-6.1-sol
+Repo Root: /home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+Branch: detached
+Worktree: /home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+Parent Agent: none
+Language: py
+Time Remaining: challenge submission already completed; no active deadline
+
+## [2026-10-25T20:22:40.631790+00:00] Post-submission implementation completion pass
+
+User Prompt (verbatim, secrets redacted):
+Here is the path to where the implementation has been done: /home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+
+Agent Response Summary:
+Inspected the current source and handoffs, preserved the submitted baseline, and repaired extraction time handling, retention-date parsing, PDF container interpretation, evidence validation, evaluation denominators, offline replay and package isolation. All 56 tests and 3 cached integrated custom cases pass; the full 518-case attempt still has 443 unresolved cases and is not claimed complete. No new runtime provider jobs were started; reports, candidate archive and implementer handoff were updated.
+
+Actions:
+* Read AGENTS.md and all current role handoffs
+* Preserved baseline source/output/package
+* Edited code and regression tests; updated README/reports/implementer memory
+* Ran completion-checks.json command sequence and validated archive replay
+* Exported completion report and updated candidate to chat outputs
+
+Context:
+tool=Codex desktop app
+model=gpt-6.1-sol
+branch=detached
+repo_root=/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+worktree=/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+parent_agent=none
+
+## [2026-10-25T20:22:40.631790+00:00] Organizer evidence clarification unavailable
+
+User Prompt (verbatim, secrets redacted):
+No information was provided on those two concerns
+
+Agent Response Summary:
+Recorded the user confirmation that no additional organizer information is available for missing resource linkage and retention conditions. These remain explicit evidence prerequisites, and the incomplete full-dataset result is preserved without fabricated mappings, rates or completion claims.
+
+Actions:
+* Recorded evidence limitations in completion-report.md and implementer memory
+
+Context:
+tool=Codex desktop app
+model=gpt-6.1-sol
+branch=detached
+repo_root=/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+worktree=/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+parent_agent=none
+
+## [2026-10-26T19:46:18.862709+00:00] Commit and publish post-submission implementation
+
+User Prompt (verbatim, secrets redacted):
+BTW, before I forget, could you push our commit and push the changes to Github so one of friends who also took part in the hackathon can also help me out with these improvements
+
+Agent Response Summary:
+Reviewed the staged post-submission implementation, reports, validated caches and candidate package. All 56 component tests pass; credential-pattern checks of staged files and archives found no matches. Created a collaboration branch from the detached checkout and prepared the existing changes for commit and GitHub publication. OmniRoute integration remains a proposal and is not included.
+
+Actions:
+* Reviewed repository instructions and staged changes.
+* Ran component tests and checked staged files/archives for credential patterns.
+* Created improvements/post-submission; committing and publishing the changes requested by the user.
+
+Context:
+tool=Codex desktop app
+model=gpt-6.1-sol
+branch=improvements/post-submission
+repo_root=/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+worktree=/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh
+parent_agent=none

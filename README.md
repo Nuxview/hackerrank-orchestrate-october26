@@ -12,6 +12,38 @@ Read [`problem_statement.md`](./problem_statement.md) for the complete challenge
 
 ## Current implementation: audit candidate, not submission-ready
 
+### Post-submission completion work
+
+The submitted source, reports, memories, output and package were preserved in a
+timestamped `artifacts/<run_id>/submitted-baseline-*.zip` before changes. Root
+`output.csv` is the historical 407-row submission and is not the result of the
+latest guarded run. An incomplete new run now explicitly warns when it preserves
+this older file and records its hash in execution metadata.
+
+Use `--offline` on the main program, sample evaluator, preprocessing, or custom
+evaluation to permit only validated matching responses from this run. A missing
+response produces an explicit diagnostic without starting a provider session.
+The original response provenance and usage remain attributable; cached replay
+does not make the earlier model work free.
+
+```bash
+python3 -B code/main.py --offline
+python3 -B code/evaluation/main.py --offline
+python3 -B code/evaluation/custom.py --offline
+```
+
+The evaluator includes every public sample in its metric denominators, including
+unresolved cases as missing predictions. JSON record update times and snapshot
+timestamps are checked as timezone-aware instants. Explicit human-readable
+retention deadlines are parsed without filling in missing retention policies.
+Serialized citations are rechecked against their source fact, resource, state,
+scope and cutoff. Package replay uses an independent cache copy and offline mode,
+so testing an archive cannot change the original run pointers or start model jobs.
+
+The pipeline remains blocked on unresolved evidence and policy prerequisites;
+passing component tests is not a claim of all-518 completion. See the current
+evaluation report and implementer handoff for exact results and blocker examples.
+
 Run: `ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056`, manager revision 3. The
 application validates inputs, interprets intent/business documents with AI,
 extracts JSON/SQL/log/text observations, reconstructs eligible resource states,
@@ -61,13 +93,14 @@ but actual attributable subscription cost is unmeasured. Published API-equivalen
 reference scenarios are separate from actual charges; missing telemetry stays unknown.
 
 The sample evaluator runs the same prediction pipeline before reading labels.
-If some samples are unresolved, it reports partial metrics with explicit subset
-denominators and exits 2. To compare an existing complete sample file only, use
+If some samples are unresolved, it counts them as missing in full-sample metrics
+and exits 2. To compare an existing complete sample file only, use
 `python3 code/evaluation/main.py --predictions <sample-output.csv>`; malformed
 present steps (including boolean/float numbering) fail, without renumbering them.
 The package command creates an allowlisted **candidate** code.zip, tests it in a
 temporary extraction with external dataset, and, when available, reproduces the
-latest target attempt using this run's external validated cache. That is not a
+latest target attempt using an independent copy of this run's validated cache in
+offline mode. That is not a
 cold-provider reproducibility claim or acceptance of unresolved decisions. No
 dataset, credentials, caches, raw artifacts, role memories or nested archive is bundled.
 

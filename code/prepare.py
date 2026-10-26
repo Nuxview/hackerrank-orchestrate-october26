@@ -24,9 +24,9 @@ def parser_fingerprint():
     return hashlib.sha256(b"".join(p.read_bytes() for p in paths)).hexdigest()
 
 
-def extract_all(tables, hashes, structured_only=False):
+def extract_all(tables, hashes, structured_only=False, offline=False):
     execution_id="preprocessing-"+str(uuid.uuid4())
-    jobs=AIJobs(BASE/"jobs",execution_id)
+    jobs=AIJobs(BASE/"jobs",execution_id,offline=offline)
     extractor=Extractor(ROOT/"dataset",tables,jobs)
     facts,coverage=extractor.run(structured_only=structured_only)
     serialized=[]
@@ -43,7 +43,7 @@ def extract_all(tables, hashes, structured_only=False):
     return snapshot,path
 
 
-def load_prepared(tables, hashes):
+def load_prepared(tables, hashes, offline=False):
     pointer=BASE/"preprocessing-current.json"
     if pointer.exists():
         ref=json.loads(pointer.read_text())
@@ -54,7 +54,7 @@ def load_prepared(tables, hashes):
                 and data["parser_sha256"]==parser_fingerprint()
                 and not any(r.get("skipped") for r in data["coverage"])):
             return data,path
-    return extract_all(tables,hashes)
+    return extract_all(tables,hashes,offline=offline)
 
 
 def restore_facts(data):
@@ -70,9 +70,10 @@ def restore_facts(data):
 if __name__=="__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--structured-only",action="store_true")
+    parser.add_argument("--offline",action="store_true",help="Use validated model responses only; never invoke a provider")
     args=parser.parse_args()
     tables,hashes=load_inputs(ROOT/"dataset")
-    data,path=extract_all(tables,hashes,args.structured_only)
+    data,path=extract_all(tables,hashes,args.structured_only,offline=args.offline)
     print(path)
     print("facts",len(data["facts"]),"artifacts",len(data["coverage"]),
           "errors",sum(bool(r.get("error")) for r in data["coverage"]))
