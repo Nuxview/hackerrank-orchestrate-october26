@@ -1,0 +1,55 @@
+{
+  "info": {
+    "id": "ses_e8e232e91ffeR9f5seQBXHOLMj",
+    "projectID": "bea13d27607a2481e9b2ede09d886d7c7aeccd62",
+    "agent": "deletion-runtime",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "failed",
+    "time": {
+      "created": 1792911659387,
+      "updated": 1792911659451,
+      "idle": 1792911659467
+    },
+    "title": "[redacted:session-title:ses_e8e232e91ffeR9f5seQBXHOLMj]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e8e232e91ffeR9f5seQBXHOLMj]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_171dcd19c001RD2dO4FlLHjy6S",
+      "time": {
+        "created": 1792911659420
+      },
+      "type": "agent-switched",
+      "agent": "deletion-runtime",
+      "previous": "deletion-runtime"
+    },
+    {
+      "id": "msg_171dcd1cb001vvfc0KhGpmZr2o",
+      "time": {
+        "created": 1792911659467
+      },
+      "type": "idle",
+      "outcome": "failed",
+      "error": {
+        "type": "unknown",
+        "message": "Agent not found: \"deletion-runtime\""
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "info": {
+    "id": "ses_e8d1b664effeMCSoVNUHnBBdMl",
+    "projectID": "9a2ead405284bfb6a417ca545cd01340d94abc5a",
+    "agent": "deletion-runtime",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 4440,
+      "output": 666,
+      "reasoning": 102,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792928946611,
+      "updated": 1792928965735,
+      "idle": 1792928965774
+    },
+    "title": "[redacted:session-title:ses_e8d1b664effeMCSoVNUHnBBdMl]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e8d1b664effeMCSoVNUHnBBdMl]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_172e499cc001E6DFmIzINNWvPp",
+      "time": {
+        "created": 1792928946636
+      },
+      "type": "agent-switched",
+      "agent": "deletion-runtime",
+      "previous": "deletion-runtime"
+    },
+    {
+      "id": "msg_172e499c900121vOPLYOSCFT7u",
+      "time": {
+        "created": 1792928946736
+      },
+      "text": "[redacted:text:msg_172e499c900121vOPLYOSCFT7u]",
+      "files": [
+        {
+          "data": "",
+          "mime": "image/png",
+          "source": {
+            "type": "inline"
+          },
+          "name": "[redacted:file-name:0]"
+        }
+      ],
+      "type": "user"
+    },
+    {
+      "id": "msg_172e49a470011TxE2e5fvvGNpp",
+      "time": {
+        "created": 1792928946776,
+        "streamed": 1792928965702,
+        "completed": 1792928965735
+      },
+      "type": "assistant",
+      "agent": "deletion-runtime",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "openai",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "",
+          "native": {
+            "redacted": "reasoning-native:msg_172e49a470011TxE2e5fvvGNpp"
+          },
+          "time": {
+            "created": 1792928950206,
+            "completed": 1792928954833
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_172e49a470011TxE2e5fvvGNpp]",
+          "native": {
+            "redacted": "text-native:msg_172e49a470011TxE2e5fvvGNpp"
+          }
+        }
+      ],
+      "finish": "stop",
+      "native": {
+        "responseId": "resp_052d0fcabe50fc40016addecb452c887d281dd153ec3c5a710",
+        "serviceTier": "default"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 4440,
+        "output": 666,
+        "reasoning": 102,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_172e4e48e001NR5Ep2Et1O62oQ",
+      "time": {
+        "created": 1792928965774
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

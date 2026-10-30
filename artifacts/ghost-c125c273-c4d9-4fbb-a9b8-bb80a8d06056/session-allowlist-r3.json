@@ -1,0 +1,472 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "at": "2026-10-25T12:48:46.053281+00:00",
+  "runtime_sessions": {
+    "ses_e8dcf431cffesYssBVnuH6FOCj": {
+      "stage": "preprocessing",
+      "record": "job-136d9ad3ba1e270ce1d25562-0.json"
+    },
+    "ses_e8dcec976ffe2w6G2q4Wc9L9xf": {
+      "stage": "preprocessing",
+      "record": "job-136d9ad3ba1e270ce1d25562-1.json"
+    },
+    "ses_e8dce452affeq5cT2yJJBHTHhx": {
+      "stage": "preprocessing",
+      "record": "job-136d9ad3ba1e270ce1d25562-2.json"
+    },
+    "ses_e8dcdbf5cffejbYUnX2dZJ0Lbj": {
+      "stage": "preprocessing",
+      "record": "job-3c9e7d25211be7f693b75b33-0.json"
+    },
+    "ses_e8dcd5109ffenPQRkO43Z6z39s": {
+      "stage": "preprocessing",
+      "record": "job-3c9e7d25211be7f693b75b33-1.json"
+    },
+    "ses_e8dccda9effey7Llgu3hCfTofz": {
+      "stage": "preprocessing",
+      "record": "job-a321b4c168f5c711a7f6a656-0.json"
+    },
+    "ses_e8dcc6cb7ffeZWP3WL1SEvFZHK": {
+      "stage": "preprocessing",
+      "record": "job-a321b4c168f5c711a7f6a656-1.json"
+    },
+    "ses_e8dcc0335ffe2iPs8HqkOFUWCv": {
+      "stage": "preprocessing",
+      "record": "job-8b60ee36f3317e053f0e0077-0.json"
+    },
+    "ses_e8dcb9122ffeX9ScQmrsYFwDH0": {
+      "stage": "preprocessing",
+      "record": "job-8b60ee36f3317e053f0e0077-1.json"
+    },
+    "ses_e8dcb2446ffeYnPViC2u7xUs2d": {
+      "stage": "preprocessing",
+      "record": "job-8b60ee36f3317e053f0e0077-2.json"
+    },
+    "ses_e8dca983dffe76qDeab1CXp54Z": {
+      "stage": "preprocessing",
+      "record": "job-bbe945afe2624ec749a5a142-0.json"
+    },
+    "ses_e8dc9fb34ffeRjzn5KbnQJLHLl": {
+      "stage": "preprocessing",
+      "record": "job-bbe945afe2624ec749a5a142-1.json"
+    },
+    "ses_e8dc971fcffeXnfMiOmRCbveK4": {
+      "stage": "preprocessing",
+      "record": "job-bbe945afe2624ec749a5a142-2.json"
+    },
+    "ses_e8dc8b8e5ffe031z4YW2k04z2V": {
+      "stage": "preprocessing",
+      "record": "job-40960d8aa41ad41d02443a2c-0.json"
+    },
+    "ses_e8dc83b3cffeG1yWwZGg8xfTbt": {
+      "stage": "preprocessing",
+      "record": "job-40960d8aa41ad41d02443a2c-1.json"
+    },
+    "ses_e8dc7c906ffeBYZA62KL0V3sbP": {
+      "stage": "preprocessing",
+      "record": "job-ae828c0300a71a5284f22db4-0.json"
+    },
+    "ses_e8dc74e49ffePf6AEmrsXap00l": {
+      "stage": "preprocessing",
+      "record": "job-ae828c0300a71a5284f22db4-1.json"
+    },
+    "ses_e8dc6d5d0ffergbdGvZBNiZq2l": {
+      "stage": "preprocessing",
+      "record": "job-ae828c0300a71a5284f22db4-2.json"
+    },
+    "ses_e8dc6515dffeS6aQWKSgtWUzOq": {
+      "stage": "preprocessing",
+      "record": "job-6fa6c75ab2ed37f25387985e-0.json"
+    },
+    "ses_e8dc5a8b2ffe9DEnqJzfl3Q2dz": {
+      "stage": "preprocessing",
+      "record": "job-6fa6c75ab2ed37f25387985e-1.json"
+    },
+    "ses_e8dc532f9ffeWY6r3rYyNM2ksa": {
+      "stage": "preprocessing",
+      "record": "job-6fa6c75ab2ed37f25387985e-2.json"
+    },
+    "ses_e8dc4b168ffeilGvdQPivQ06p8": {
+      "stage": "preprocessing",
+      "record": "job-a2cf2e5024ec4c2b82af4b38-0.json"
+    },
+    "ses_e8dc41dd9ffeNomMcyzGS055TX": {
+      "stage": "preprocessing",
+      "record": "job-a2cf2e5024ec4c2b82af4b38-1.json"
+    },
+    "ses_e8dc3906fffe8NyxprxJmAlm3L": {
+      "stage": "preprocessing",
+      "record": "job-a2cf2e5024ec4c2b82af4b38-2.json"
+    },
+    "ses_e8dc2f4d1ffeQ2ejSxK3JcyJzN": {
+      "stage": "preprocessing",
+      "record": "job-3e3f2edd7b044231ca5a8208-0.json"
+    },
+    "ses_e8dc27046ffeu7Oe0JRP4yFKL4": {
+      "stage": "preprocessing",
+      "record": "job-3e3f2edd7b044231ca5a8208-1.json"
+    },
+    "ses_e8dc1fd3affeO1IK7nb2j5arlG": {
+      "stage": "preprocessing",
+      "record": "job-3e3f2edd7b044231ca5a8208-2.json"
+    },
+    "ses_e8dc1525fffe4lx53bRdBWBn4p": {
+      "stage": "preprocessing",
+      "record": "job-e631f025fe1d81dba6aaa42c-0.json"
+    },
+    "ses_e8dc0eadaffe4qqZ5WTPQPHF60": {
+      "stage": "preprocessing",
+      "record": "job-e631f025fe1d81dba6aaa42c-1.json"
+    },
+    "ses_e8dc089e2ffeVVlwe3cdrKa7sv": {
+      "stage": "preprocessing",
+      "record": "job-e631f025fe1d81dba6aaa42c-2.json"
+    },
+    "ses_e8dc00a6bffe1UsUZpJr9ItazV": {
+      "stage": "preprocessing",
+      "record": "job-ebcea2fa0855db945c393454-0.json"
+    },
+    "ses_e8dbf6661ffeeDQcCTvhq2bmHD": {
+      "stage": "preprocessing",
+      "record": "job-ebcea2fa0855db945c393454-1.json"
+    },
+    "ses_e8dbee0eaffep4Jnl0bOJFy5sQ": {
+      "stage": "preprocessing",
+      "record": "job-ebcea2fa0855db945c393454-2.json"
+    },
+    "ses_e8dbe54e4ffecD8UolRryAnnI8": {
+      "stage": "preprocessing",
+      "record": "job-1fa0660913e156294e909285-0.json"
+    },
+    "ses_e8dbe1081ffeGAJlBmstD8cUfQ": {
+      "stage": "preprocessing",
+      "record": "job-1fa0660913e156294e909285-1.json"
+    },
+    "ses_e8dbdcd74ffeb7KKDW2WgXJKe2": {
+      "stage": "preprocessing",
+      "record": "job-1fa0660913e156294e909285-2.json"
+    },
+    "ses_e8dbd2f45ffe70eyYTaaMHhbjr": {
+      "stage": "preprocessing",
+      "record": "job-255287a6c1dc62221acd60d0-0.json"
+    },
+    "ses_e8dbcbb1fffeKSEQa5Co2r77Ud": {
+      "stage": "custom",
+      "record": "job-3b06a538606fdbf1870f4a2e-0.json"
+    },
+    "ses_e8dbcde6fffepoIqQ7NSejFRBk": {
+      "stage": "preprocessing",
+      "record": "job-255287a6c1dc62221acd60d0-1.json"
+    },
+    "ses_e8dbc7ef2ffeeiB20A2vcDtMUu": {
+      "stage": "preprocessing",
+      "record": "job-255287a6c1dc62221acd60d0-2.json"
+    },
+    "ses_e8dbc1d63ffeQxonBlH6PK9TW2": {
+      "stage": "preprocessing",
+      "record": "job-1b45d933356fc88929bef5e4-0.json"
+    },
+    "ses_e8dbb96f8ffefH75PlhOtuTSdj": {
+      "stage": "preprocessing",
+      "record": "job-1b45d933356fc88929bef5e4-1.json"
+    },
+    "ses_e8dbb3e05ffeOo5ol1z4mrQ1x2": {
+      "stage": "preprocessing",
+      "record": "job-1b45d933356fc88929bef5e4-2.json"
+    },
+    "ses_e8db81423ffeqwcOLdUay2KekP": {
+      "stage": "preprocessing",
+      "record": "job-d8a765d6c1d411b71792c9b6-0.json"
+    },
+    "ses_e8db7a1e7ffeq7qNhs5bN1bjpW": {
+      "stage": "preprocessing",
+      "record": "job-efd0308032310f388ab5bb25-0.json"
+    },
+    "ses_e8db7461effeJRokHMxQ6VmmzH": {
+      "stage": "preprocessing",
+      "record": "job-6a90e193064e30ad4438a171-0.json"
+    },
+    "ses_e8db6f583ffeKcBgSyfETe9PAm": {
+      "stage": "preprocessing",
+      "record": "job-729d7457d4f2c966591a2e9e-0.json"
+    },
+    "ses_e8db69e3fffe1K9oDm9CDOqTHM": {
+      "stage": "preprocessing",
+      "record": "job-dbb5ce568f1bcdbb62bdb983-0.json"
+    },
+    "ses_e8db63460ffeXTIp5kwucwlRpI": {
+      "stage": "preprocessing",
+      "record": "job-20c772b8826a20b1305136be-0.json"
+    },
+    "ses_e8db5d63effel1DIVO6PX7l9fX": {
+      "stage": "preprocessing",
+      "record": "job-f8a6a497b9c98911cd31b260-0.json"
+    },
+    "ses_e8db52d7cffe8Cn5za2ciyEvk9": {
+      "stage": "preprocessing",
+      "record": "job-087481c7f8cb5ffb1d227048-0.json"
+    },
+    "ses_e8db51818ffeZ5H7W7VrvQvzwf": {
+      "stage": "preprocessing",
+      "record": "job-087481c7f8cb5ffb1d227048-1.json"
+    },
+    "ses_e8db50257ffea5FoR2yOHrdHre": {
+      "stage": "preprocessing",
+      "record": "job-087481c7f8cb5ffb1d227048-2.json"
+    },
+    "ses_e8db4e200ffeTT7VGLaocIcS3o": {
+      "stage": "preprocessing",
+      "record": "job-c48d5575e5aff383c3c106ad-0.json"
+    },
+    "ses_e8db4cbd5ffeGQDvM4hfvKJoaC": {
+      "stage": "preprocessing",
+      "record": "job-c48d5575e5aff383c3c106ad-1.json"
+    },
+    "ses_e8db4b4eeffeTnQuV38dNp5YU4": {
+      "stage": "preprocessing",
+      "record": "job-c48d5575e5aff383c3c106ad-2.json"
+    },
+    "ses_e8db486ecffe30tkDVgDehx6Kh": {
+      "stage": "preprocessing",
+      "record": "job-1e2d9d2e2d9a8b86ffcb014e-0.json"
+    },
+    "ses_e8db4716dffePdF137pWo2A5RB": {
+      "stage": "preprocessing",
+      "record": "job-1e2d9d2e2d9a8b86ffcb014e-1.json"
+    },
+    "ses_e8db45b81ffet1Svk62fXwpMyx": {
+      "stage": "preprocessing",
+      "record": "job-1e2d9d2e2d9a8b86ffcb014e-2.json"
+    },
+    "ses_e8db4326dffeCDzZ1D6Lof6H9j": {
+      "stage": "preprocessing",
+      "record": "job-95dee83fa2aa8c5132b110b7-0.json"
+    },
+    "ses_e8db41cd3ffeYmlQZmEGPtwb3O": {
+      "stage": "preprocessing",
+      "record": "job-95dee83fa2aa8c5132b110b7-1.json"
+    },
+    "ses_e8db40885ffepQ6BgMKDXPitZ9": {
+      "stage": "preprocessing",
+      "record": "job-95dee83fa2aa8c5132b110b7-2.json"
+    },
+    "ses_e8db3e5d2ffeyAWXa3Zwa8PF3j": {
+      "stage": "preprocessing",
+      "record": "job-8bb0e7afabdff627216e0991-0.json"
+    },
+    "ses_e8db3d13fffeHaT1JUA0fy52mi": {
+      "stage": "preprocessing",
+      "record": "job-8bb0e7afabdff627216e0991-1.json"
+    },
+    "ses_e8db3bc40ffeoo8bJSl22lQzgo": {
+      "stage": "preprocessing",
+      "record": "job-8bb0e7afabdff627216e0991-2.json"
+    },
+    "ses_e8db3a5d7ffehzP7nWnwCu5r3a": {
+      "stage": "preprocessing",
+      "record": "job-51e66a7a78c381bab6beb81c-0.json"
+    },
+    "ses_e8db38bc5ffe1mTdcc4epo5mz4": {
+      "stage": "preprocessing",
+      "record": "job-51e66a7a78c381bab6beb81c-1.json"
+    },
+    "ses_e8db37692ffe5QQGtCaJH3sST9": {
+      "stage": "preprocessing",
+      "record": "job-51e66a7a78c381bab6beb81c-2.json"
+    },
+    "ses_e8db36259ffe55vxdaXBXqFj99": {
+      "stage": "preprocessing",
+      "record": "job-2d0a28d600371d88ab994aba-0.json"
+    },
+    "ses_e8db34afcffee3Cmv37y05spZ1": {
+      "stage": "preprocessing",
+      "record": "job-2d0a28d600371d88ab994aba-1.json"
+    },
+    "ses_e8db337d3ffen04y7gJdqFvmhX": {
+      "stage": "preprocessing",
+      "record": "job-2d0a28d600371d88ab994aba-2.json"
+    },
+    "ses_e8db2f95dffenDxVo40UutMbYy": {
+      "stage": "preprocessing",
+      "record": "job-9b5ab75955a55575d4cc3404-0.json"
+    },
+    "ses_e8db2e470ffeG9FjqDCwpz5GNI": {
+      "stage": "preprocessing",
+      "record": "job-9b5ab75955a55575d4cc3404-1.json"
+    },
+    "ses_e8db2cd69ffeQKCZufXInl3Zfv": {
+      "stage": "preprocessing",
+      "record": "job-9b5ab75955a55575d4cc3404-2.json"
+    },
+    "ses_e8d1bcfb5ffeFiJiSQ85IuX0EV": {
+      "stage": "preprocessing",
+      "record": "job-773341b3b50c2b7f027b9762-618dff7b-0.json"
+    },
+    "ses_e8d1b664effeMCSoVNUHnBBdMl": {
+      "stage": "preprocessing",
+      "record": "job-50e1ab603ce68c3178a8f4e2-618dff7b-0.json"
+    },
+    "ses_e8d1ae5c6ffehW97sq8l4qydNB": {
+      "stage": "preprocessing",
+      "record": "job-bdef25536d97d1c462db1719-618dff7b-0.json"
+    },
+    "ses_e8d1a6abbffeKvKDPqUwhzQRs4": {
+      "stage": "preprocessing",
+      "record": "job-3e12ba728b7591cf4b071388-618dff7b-0.json"
+    },
+    "ses_e8d1a09b0ffe5tFCVOv35VWa9H": {
+      "stage": "preprocessing",
+      "record": "job-6da3277ab16e74e767707f9d-618dff7b-0.json"
+    },
+    "ses_e8d197e32fferSCJS7r36qAGEe": {
+      "stage": "preprocessing",
+      "record": "job-f6f666ae3ee76979f4130f8d-618dff7b-0.json"
+    },
+    "ses_e8d194b67ffeBWPwcNs4UJd2KZ": {
+      "stage": "preprocessing",
+      "record": "job-49881167ac92bca6267147b7-618dff7b-0.json"
+    },
+    "ses_e8d18f7b7ffeLJVu7N8Bmv8RBT": {
+      "stage": "preprocessing",
+      "record": "job-63a44b28cd3da4909eacc10e-618dff7b-0.json"
+    },
+    "ses_e8d15324fffeyTojkpoKfA92UZ": {
+      "stage": "sample",
+      "record": "job-48896acf77b03c80b005bfa2-89e64ed7-0.json"
+    },
+    "ses_e8d14a1b0ffe4sm2vhahl7my2I": {
+      "stage": "sample",
+      "record": "job-48896acf77b03c80b005bfa2-89e64ed7-1.json"
+    },
+    "ses_e8d140a64ffevgZEdr8S8wv70B": {
+      "stage": "sample",
+      "record": "job-48896acf77b03c80b005bfa2-89e64ed7-2.json"
+    },
+    "ses_e8d137687ffe67jAHgNaHtYXgt": {
+      "stage": "sample",
+      "record": "job-fe54e1e7a8800de8e883485d-89e64ed7-0.json"
+    },
+    "ses_e8d0fa2f3ffemk9qZGir0miRl8": {
+      "stage": "sample",
+      "record": "job-7690d2455685a064b8142907-aa173750-0.json"
+    },
+    "ses_e8d0eef2bffeIE84wQaOnliZM1": {
+      "stage": "sample",
+      "record": "job-029a3c9cfd132309b2c43d9a-aa173750-0.json"
+    },
+    "ses_e8d0d3f51ffeWboDr2F6ER4DqD": {
+      "stage": "final",
+      "record": "job-9bab2405634e32382076806e-d41dd3da-0.json"
+    },
+    "ses_e8d0cc674ffevbfVxHkeRRlC2y": {
+      "stage": "final",
+      "record": "job-deaf48a41944a7698e81f555-d41dd3da-0.json"
+    },
+    "ses_e8d0c30a7ffe7uX5WbXmgmB5QQ": {
+      "stage": "final",
+      "record": "job-cd16c19dbda218a33cf12caa-d41dd3da-0.json"
+    },
+    "ses_e8d0bca6affezAHTk2fvvTYhNr": {
+      "stage": "final",
+      "record": "job-69f86b4b8127325f4ff654ad-d41dd3da-0.json"
+    },
+    "ses_e8d0b6372ffeC6mMGoup2DnHHH": {
+      "stage": "final",
+      "record": "job-de8cd27c8e6232abed5d1db4-d41dd3da-0.json"
+    },
+    "ses_e8d0af585ffeY5OnxYosa04vVG": {
+      "stage": "final",
+      "record": "job-a67de545f0e18e2e94eb93cb-d41dd3da-0.json"
+    },
+    "ses_e8d0a858cffeEjAHmS1eOzUvGs": {
+      "stage": "final",
+      "record": "job-e8a7e00225813604ed76aab1-d41dd3da-0.json"
+    },
+    "ses_e8d0a1b50ffeBlV4fSTitF6ChH": {
+      "stage": "final",
+      "record": "job-8bb14047acd8cb9c28182394-d41dd3da-0.json"
+    },
+    "ses_e8d09b888ffeEs4XmcwHF9t17f": {
+      "stage": "final",
+      "record": "job-3bda5f908e78ae291d2d29a1-d41dd3da-0.json"
+    },
+    "ses_e8d094d82ffe3Pi3E5YxlJkClQ": {
+      "stage": "final",
+      "record": "job-44f8e38556c51a1337a3ccf1-d41dd3da-0.json"
+    },
+    "ses_e8d08da75ffeZxAyTcMvqyoXAb": {
+      "stage": "final",
+      "record": "job-c5f23e2cbe94f429d2191db3-d41dd3da-0.json"
+    },
+    "ses_e8d085ebeffeRpaVdCStTQqMlp": {
+      "stage": "final",
+      "record": "job-f6b73393914c9da3ed908f8c-d41dd3da-0.json"
+    },
+    "ses_e8d07f281ffeggvAfM44EaQZhq": {
+      "stage": "final",
+      "record": "job-b4659f9f2109f4319ee34c1f-d41dd3da-0.json"
+    },
+    "ses_e8d0787ffffeTPMtKl8IE3504D": {
+      "stage": "final",
+      "record": "job-52c87a201feb1743af3654bf-d41dd3da-0.json"
+    },
+    "ses_e8d071e33ffeGfZsIyefLcC8L4": {
+      "stage": "final",
+      "record": "job-4b0bee6ddc3da74d9187c6f8-d41dd3da-0.json"
+    },
+    "ses_e8d06b2e2ffefaHMstfWbRkG1k": {
+      "stage": "final",
+      "record": "job-71aa65befe6a7c4749d7ab68-d41dd3da-0.json"
+    },
+    "ses_e8d064ab8ffe5Vq5Si6vk2rN4S": {
+      "stage": "final",
+      "record": "job-c651c5be77a1867606115e93-d41dd3da-0.json"
+    },
+    "ses_e8d05e127ffe68Fo8Eu5sw7FVV": {
+      "stage": "final",
+      "record": "job-a0c206bb514dfaeb54a73f97-d41dd3da-0.json"
+    },
+    "ses_e8d056f7cffej7MgX7GiIKCrg2": {
+      "stage": "final",
+      "record": "job-67e4384a8f02d39b99a8fd12-d41dd3da-0.json"
+    },
+    "ses_e8d04f9ddffewPAQmOQpG4pwse": {
+      "stage": "final",
+      "record": "job-c7fac6907dce9e2feb4baa79-d41dd3da-0.json"
+    },
+    "ses_e8d0490efffeeRy1oC5Zf1wA3c": {
+      "stage": "final",
+      "record": "job-b477542b7d2b90cdd39b88a5-d41dd3da-0.json"
+    },
+    "ses_e8d04263effepdgnCtyKO6iWHT": {
+      "stage": "final",
+      "record": "job-1c1afc0c22ee8002ce7a816e-d41dd3da-0.json"
+    },
+    "ses_e8cf5f67cffeu7sJ8Z1Oi9fIrb": {
+      "stage": "custom",
+      "record": "job-c6568e834920982d63a839e0-01af145d-0.json"
+    },
+    "ses_e8e2456dbffexVNRJaTM28qx3g": {
+      "stage": "synthetic_smoke",
+      "record": "session-allowlist.json"
+    },
+    "ses_e8e232e91ffeR9f5seQBXHOLMj": {
+      "stage": "synthetic_smoke",
+      "record": "session-allowlist.json"
+    },
+    "ses_e8e2286d5ffeh6CuhsKs2A6O9z": {
+      "stage": "synthetic_smoke",
+      "record": "session-allowlist.json"
+    },
+    "ses_e8e1bff5cffecFAvTroWiYHDBP": {
+      "stage": "synthetic_smoke",
+      "record": "session-allowlist.json"
+    }
+  },
+  "implementer_session_id": "ses_e8e282347ffeMXNtaG4X3niYEz",
+  "auditor_session_id": "ses_e8e0402ccffe4K5xN1SV5l8LFH",
+  "manager_session_ids": null,
+  "native_runtime_export_failures": [],
+  "ownership": "Exact session IDs from current-run creation records only. Sanitized titles do not preserve literal run titles.",
+  "closeout": "Human must review completeness/redactions and export development sessions after exit; no complete trace ZIP certified."
+}

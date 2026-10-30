@@ -1,0 +1,50 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "at": "2026-10-25T08:49:20.991779+00:00",
+  "scope": "Cumulative counters once per known current-run session; not summed with runtime or called complete development coverage",
+  "manager_session_id": null,
+  "sessions": [
+    {
+      "role": "implementer",
+      "session_id": "ses_e8e282347ffeMXNtaG4X3niYEz",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "openai",
+        "variant": "high"
+      },
+      "tokens": {
+        "input": 202305,
+        "output": 64432,
+        "reasoning": 37139,
+        "cache": {
+          "read": 13685760,
+          "write": 0
+        }
+      },
+      "model_calls": null,
+      "stage": "development",
+      "billing": "User-confirmed ChatGPT subscription/sign-in; attributable dollars unmeasured"
+    },
+    {
+      "role": "auditor",
+      "session_id": "ses_e8e0402ccffe4K5xN1SV5l8LFH",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "openai",
+        "variant": "high"
+      },
+      "tokens": {
+        "input": 91815,
+        "output": 14650,
+        "reasoning": 3527,
+        "cache": {
+          "read": 1337088,
+          "write": 0
+        }
+      },
+      "model_calls": null,
+      "stage": "development",
+      "billing": "User-confirmed ChatGPT subscription/sign-in; attributable dollars unmeasured"
+    }
+  ]
+}

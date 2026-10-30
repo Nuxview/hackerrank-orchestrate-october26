@@ -1,0 +1,32 @@
+{
+  "data": {
+    "id": "ses_e8e2286d5ffeh6CuhsKs2A6O9z",
+    "projectID": "0bb055bbafea91d3b1632aabd4d199958e6eb2fa",
+    "agent": "deletion-runtime",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 1309,
+      "output": 43,
+      "reasoning": 15,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792911702476,
+      "updated": 1792911707397,
+      "idle": 1792911707406
+    },
+    "title": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056:synthetic-intent",
+    "location": {
+      "directory": "/tmp/opencode/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056-nnib2w94"
+    }
+  }
+}

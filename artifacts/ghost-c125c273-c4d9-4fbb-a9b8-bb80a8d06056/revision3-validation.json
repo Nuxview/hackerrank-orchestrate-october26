@@ -1,0 +1,17 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "at": "2026-10-25T12:45:14.084169+00:00",
+  "source_fingerprints_match_run": true,
+  "input_hashes_match_run": true,
+  "requests_attempted": 518,
+  "internally_resolved_rows": 75,
+  "unresolved": 443,
+  "subset_schema_time_and_proof_reference_checks": true,
+  "independent_semantic_audit": false,
+  "package_members": 28,
+  "package_matches_current_source": true,
+  "secret_pattern_scan": "No matching key/private-key literals; not a comprehensive secret audit",
+  "output_sha256": null,
+  "subset_sha256": "083c6180972e1e47531f28cb43ea695828e03c6446e31f36684a836edb88325f",
+  "code_zip_sha256": "932c5800a898629ebaad70f1a919c1bc3f1c28704b90e4ce5e4cbecae7952c6a"
+}

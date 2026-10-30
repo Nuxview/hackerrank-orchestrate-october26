@@ -1,0 +1,128 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "at": "2026-10-25T07:21:41.932190+00:00",
+  "checks": [
+    {
+      "name": "unit",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "code/tests",
+        "-v"
+      ],
+      "cwd": "/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": "test_missing_slots_penalize_every_field (test_core.EvaluationTests.test_missing_slots_penalize_every_field) ... ok\ntest_email_collision_blocks (test_core.FactsTests.test_email_collision_blocks) ... ok\ntest_future_identity_and_history_excluded (test_core.FactsTests.test_future_identity_and_history_excluded) ... ok\ntest_no_substring_or_name_join (test_core.FactsTests.test_no_substring_or_name_join) ... ok\ntest_normalization_does_not_invent_aliases (test_core.FactsTests.test_normalization_does_not_invent_aliases) ... ok\ntest_old_alias_retains_raw_provenance (test_core.FactsTests.test_old_alias_retains_raw_provenance) ... ok\ntest_two_time_cutoff_and_missing_null (test_core.FactsTests.test_two_time_cutoff_and_missing_null) ... ok\ntest_csv_boundary (test_core.InputsTests.test_csv_boundary) ... ok\ntest_manifest_escape_and_symlink (test_core.InputsTests.test_manifest_escape_and_symlink) ... ok\ntest_real_inputs_and_historical_resolution (test_core.InputsTests.test_real_inputs_and_historical_resolution) ... ok\ntest_timestamps_require_zone (test_core.InputsTests.test_timestamps_require_zone) ... ok\ntest_fresh_location_denied_tools_and_recorded_usage (test_core.RuntimeTests.test_fresh_location_denied_tools_and_recorded_usage) ... ok\ntest_oversized_or_invalid_jobs_fail_before_calls (test_core.RuntimeTests.test_oversized_or_invalid_jobs_fail_before_calls) ... ok\ntest_structured_intent_validation (test_core.RuntimeTests.test_structured_intent_validation) ... ok\ntest_all_original_sql_and_replica_drift (test_core.SQLTests.test_all_original_sql_and_replica_drift) ... ok\ntest_invalid_or_open_transaction_is_not_absence (test_core.SQLTests.test_invalid_or_open_transaction_is_not_absence) ... ok\ntest_sql_filesystem_and_extension_operations_denied (test_core.SQLTests.test_sql_filesystem_and_extension_operations_denied) ... ok\ntest_atomic_failure_preserves_existing_output (test_core.StepsTests.test_atomic_failure_preserves_existing_output) ... ok\ntest_canonical_risk_before_record_order_and_blank_future_citations (test_core.StepsTests.test_canonical_risk_before_record_order_and_blank_future_citations) ... ok\ntest_complete_and_unauthorized_contracts (test_core.StepsTests.test_complete_and_unauthorized_contracts) ... ok\ntest_malformed_fields_types_operations_and_citations_rejected (test_core.StepsTests.test_malformed_fields_types_operations_and_citations_rejected) ... ok\ntest_string_order_and_byte_determinism (test_core.StepsTests.test_string_order_and_byte_determinism) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 9.665s\n\nOK\n"
+    },
+    {
+      "name": "compile",
+      "command": [
+        "python3",
+        "-m",
+        "compileall",
+        "-q",
+        "code"
+      ],
+      "cwd": "/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "input-gate",
+      "command": [
+        "python3",
+        "code/main.py",
+        "--check-inputs"
+      ],
+      "cwd": "/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "{\n  \"run_id\": \"ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056\",\n  \"requests\": 518,\n  \"manifest_artifacts\": 94,\n  \"hashed_prediction_inputs\": 100,\n  \"sql_snapshots\": [\n    {\n      \"file_id\": \"evidence_05\",\n      \"tables\": 2,\n      \"rows\": 61\n    },\n    {\n      \"file_id\": \"evidence_10\",\n      \"tables\": 2,\n      \"rows\": 59\n    },\n    {\n      \"file_id\": \"evidence_15\",\n      \"tables\": 2,\n      \"rows\": 49\n    },\n    {\n      \"file_id\": \"evidence_20\",\n      \"tables\": 2,\n      \"rows\": 63\n    },\n    {\n      \"file_id\": \"evidence_24\",\n      \"tables\": 2,\n      \"rows\": 50\n    },\n    {\n      \"file_id\": \"evidence_29\",\n      \"tables\": 3,\n      \"rows\": 85\n    },\n    {\n      \"file_id\": \"evidence_33\",\n      \"tables\": 3,\n      \"rows\": 89\n    },\n    {\n      \"file_id\": \"evidence_38\",\n      \"tables\": 3,\n      \"rows\": 85\n    },\n    {\n      \"file_id\": \"evidence_43\",\n      \"tables\": 2,\n      \"rows\": 51\n    },\n    {\n      \"file_id\": \"evidence_47\",\n      \"tables\": 2,\n      \"rows\": 49\n    },\n    {\n      \"file_id\": \"evidence_52\",\n      \"tables\": 2,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_54\",\n      \"tables\": 2,\n      \"rows\": 7\n    },\n    {\n      \"file_id\": \"evidence_57\",\n      \"tables\": 1,\n      \"rows\": 3\n    },\n    {\n      \"file_id\": \"evidence_63\",\n      \"tables\": 9,\n      \"rows\": 24\n    },\n    {\n      \"file_id\": \"evidence_66\",\n      \"tables\": 9,\n      \"rows\": 31\n    },\n    {\n      \"file_id\": \"evidence_69\",\n      \"tables\": 9,\n      \"rows\": 26\n    },\n    {\n      \"file_id\": \"evidence_72\",\n      \"tables\": 9,\n      \"rows\": 28\n    },\n    {\n      \"file_id\": \"evidence_75\",\n      \"tables\": 9,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_78\",\n      \"tables\": 9,\n      \"rows\": 26\n    },\n    {\n      \"file_id\": \"evidence_81\",\n      \"tables\": 9,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_84\",\n      \"tables\": 9,\n      \"rows\": 34\n    },\n    {\n      \"file_id\": \"evidence_87\",\n      \"tables\": 9,\n      \"rows\": 27\n    },\n    {\n      \"file_id\": \"evidence_90\",\n      \"tables\": 9,\n      \"rows\": 1\n    },\n    {\n      \"file_id\": \"evidence_93\",\n      \"tables\": 9,\n      \"rows\": 25\n    }\n  ],\n  \"full_solver_ready\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "external-cwd",
+      "command": [
+        "python3",
+        "/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh/code/main.py",
+        "--check-inputs"
+      ],
+      "cwd": "/tmp/opencode",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "{\n  \"run_id\": \"ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056\",\n  \"requests\": 518,\n  \"manifest_artifacts\": 94,\n  \"hashed_prediction_inputs\": 100,\n  \"sql_snapshots\": [\n    {\n      \"file_id\": \"evidence_05\",\n      \"tables\": 2,\n      \"rows\": 61\n    },\n    {\n      \"file_id\": \"evidence_10\",\n      \"tables\": 2,\n      \"rows\": 59\n    },\n    {\n      \"file_id\": \"evidence_15\",\n      \"tables\": 2,\n      \"rows\": 49\n    },\n    {\n      \"file_id\": \"evidence_20\",\n      \"tables\": 2,\n      \"rows\": 63\n    },\n    {\n      \"file_id\": \"evidence_24\",\n      \"tables\": 2,\n      \"rows\": 50\n    },\n    {\n      \"file_id\": \"evidence_29\",\n      \"tables\": 3,\n      \"rows\": 85\n    },\n    {\n      \"file_id\": \"evidence_33\",\n      \"tables\": 3,\n      \"rows\": 89\n    },\n    {\n      \"file_id\": \"evidence_38\",\n      \"tables\": 3,\n      \"rows\": 85\n    },\n    {\n      \"file_id\": \"evidence_43\",\n      \"tables\": 2,\n      \"rows\": 51\n    },\n    {\n      \"file_id\": \"evidence_47\",\n      \"tables\": 2,\n      \"rows\": 49\n    },\n    {\n      \"file_id\": \"evidence_52\",\n      \"tables\": 2,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_54\",\n      \"tables\": 2,\n      \"rows\": 7\n    },\n    {\n      \"file_id\": \"evidence_57\",\n      \"tables\": 1,\n      \"rows\": 3\n    },\n    {\n      \"file_id\": \"evidence_63\",\n      \"tables\": 9,\n      \"rows\": 24\n    },\n    {\n      \"file_id\": \"evidence_66\",\n      \"tables\": 9,\n      \"rows\": 31\n    },\n    {\n      \"file_id\": \"evidence_69\",\n      \"tables\": 9,\n      \"rows\": 26\n    },\n    {\n      \"file_id\": \"evidence_72\",\n      \"tables\": 9,\n      \"rows\": 28\n    },\n    {\n      \"file_id\": \"evidence_75\",\n      \"tables\": 9,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_78\",\n      \"tables\": 9,\n      \"rows\": 26\n    },\n    {\n      \"file_id\": \"evidence_81\",\n      \"tables\": 9,\n      \"rows\": 32\n    },\n    {\n      \"file_id\": \"evidence_84\",\n      \"tables\": 9,\n      \"rows\": 34\n    },\n    {\n      \"file_id\": \"evidence_87\",\n      \"tables\": 9,\n      \"rows\": 27\n    },\n    {\n      \"file_id\": \"evidence_90\",\n      \"tables\": 9,\n      \"rows\": 1\n    },\n    {\n      \"file_id\": \"evidence_93\",\n      \"tables\": 9,\n      \"rows\": 25\n    }\n  ],\n  \"full_solver_ready\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "no-fabricated-output",
+      "command": [
+        "python3",
+        "code/main.py"
+      ],
+      "cwd": "/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "passed": true,
+      "stdout": "",
+      "stderr": "BLOCKED: full inference is not implemented in this pass. Manager disposition of AMB-004 and runtime pricing is pending. No output.csv was written.\n"
+    },
+    {
+      "name": "no-fabricated-metrics",
+      "command": [
+        "python3",
+        "code/evaluation/main.py"
+      ],
+      "cwd": "/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "passed": true,
+      "stdout": "",
+      "stderr": "BLOCKED: no real sample-pipeline predictions exist; no accuracy is claimed.\n"
+    },
+    {
+      "name": "recorded-smoke",
+      "command": [
+        "python3",
+        "code/runtime/smoke.py"
+      ],
+      "cwd": "/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "Revalidating this run's recorded smoke; no new provider call\nPASS: five intent decisions, exact synthetic image identifiers and grounded quote\nsession ses_e8e1bff5cffecFAvTroWiYHDBP tokens {'input': 949, 'output': 309, 'reasoning': 15, 'cache': {'read': 0, 'write': 0}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/home/pierce/Documents/Projects/Challenges/ghost-data-sol-fresh",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "dataset_sha256": "9fe321bd9167a5f6b831eff96b5d211c7b9c69ab4811fd88a636c4a5e31ca497",
+  "inputs_unchanged": true,
+  "default_and_evaluator_fail_closed": true,
+  "root_output_exists": false,
+  "code_zip_exists": false,
+  "all_executed_component_checks_passed": true,
+  "required_full_pipeline_checks_complete": false
+}

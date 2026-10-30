@@ -1,0 +1,1351 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "captured_at": "2026-10-25T12:32:15.381649+00:00",
+  "sessions": {
+    "ses_e8db52d7cffe8Cn5za2ciyEvk9": {
+      "session_id": "ses_e8db52d7cffe8Cn5za2ciyEvk9",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db52d7cffe8Cn5za2ciyEvk9",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724ad3e6001MRDVCjWGEgwd7B",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db51818ffeZ5H7W7VrvQvzwf": {
+      "session_id": "ses_e8db51818ffeZ5H7W7VrvQvzwf",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db51818ffeZ5H7W7VrvQvzwf",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724ae89c001FgaheeFXR9RYM5",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db50257ffea5FoR2yOHrdHre": {
+      "session_id": "ses_e8db50257ffea5FoR2yOHrdHre",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db50257ffea5FoR2yOHrdHre",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724afe9b001FiWhHMikWqS6up",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db4e200ffeTT7VGLaocIcS3o": {
+      "session_id": "ses_e8db4e200ffeTT7VGLaocIcS3o",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db4e200ffeTT7VGLaocIcS3o",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724b1ed9001N9Q3yftXbURoAB",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db4cbd5ffeGQDvM4hfvKJoaC": {
+      "session_id": "ses_e8db4cbd5ffeGQDvM4hfvKJoaC",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db4cbd5ffeGQDvM4hfvKJoaC",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724b3506001HxZZXGkN0AJntt",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db4b4eeffeTnQuV38dNp5YU4": {
+      "session_id": "ses_e8db4b4eeffeTnQuV38dNp5YU4",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db4b4eeffeTnQuV38dNp5YU4",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724b4bff001pBEhoM6wmaA7in",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db486ecffe30tkDVgDehx6Kh": {
+      "session_id": "ses_e8db486ecffe30tkDVgDehx6Kh",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db486ecffe30tkDVgDehx6Kh",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724b79f60017OZHvd9xzVAYsn",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db4716dffePdF137pWo2A5RB": {
+      "session_id": "ses_e8db4716dffePdF137pWo2A5RB",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db4716dffePdF137pWo2A5RB",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724b8f7f001by1yQgyjquIQkj",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db45b81ffet1Svk62fXwpMyx": {
+      "session_id": "ses_e8db45b81ffet1Svk62fXwpMyx",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db45b81ffet1Svk62fXwpMyx",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724ba59d001sCc6pnZMDEXYKd",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db4326dffeCDzZ1D6Lof6H9j": {
+      "session_id": "ses_e8db4326dffeCDzZ1D6Lof6H9j",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db4326dffeCDzZ1D6Lof6H9j",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724bce86001s57m0JlunVC6UW",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db41cd3ffeYmlQZmEGPtwb3O": {
+      "session_id": "ses_e8db41cd3ffeYmlQZmEGPtwb3O",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db41cd3ffeYmlQZmEGPtwb3O",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724be4040015YXk6W2JfcWSaI",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db40885ffepQ6BgMKDXPitZ9": {
+      "session_id": "ses_e8db40885ffepQ6BgMKDXPitZ9",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db40885ffepQ6BgMKDXPitZ9",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724bf84a001YrZWqkAluhUrC3",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db3e5d2ffeyAWXa3Zwa8PF3j": {
+      "session_id": "ses_e8db3e5d2ffeyAWXa3Zwa8PF3j",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db3e5d2ffeyAWXa3Zwa8PF3j",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724c1b06001c4WunVj2GuAdoQ",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db3d13fffeHaT1JUA0fy52mi": {
+      "session_id": "ses_e8db3d13fffeHaT1JUA0fy52mi",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db3d13fffeHaT1JUA0fy52mi",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724c2faa001w8AMI4DcHrzmgT",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db3bc40ffeoo8bJSl22lQzgo": {
+      "session_id": "ses_e8db3bc40ffeoo8bJSl22lQzgo",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db3bc40ffeoo8bJSl22lQzgo",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724c44a8001VXo9s7yWg9719J",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db3a5d7ffehzP7nWnwCu5r3a": {
+      "session_id": "ses_e8db3a5d7ffehzP7nWnwCu5r3a",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db3a5d7ffehzP7nWnwCu5r3a",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724c5aa2001UQu6vPbPVyFQ0Q",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db38bc5ffe1mTdcc4epo5mz4": {
+      "session_id": "ses_e8db38bc5ffe1mTdcc4epo5mz4",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db38bc5ffe1mTdcc4epo5mz4",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724c74ba001JOIOSPJm8Ejnoc",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db37692ffe5QQGtCaJH3sST9": {
+      "session_id": "ses_e8db37692ffe5QQGtCaJH3sST9",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db37692ffe5QQGtCaJH3sST9",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724c89eb001cAnK3QfUSTS1Ur",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db36259ffe55vxdaXBXqFj99": {
+      "session_id": "ses_e8db36259ffe55vxdaXBXqFj99",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db36259ffe55vxdaXBXqFj99",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724c9e36001YaNhV3EdlBaNnN",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db34afcffee3Cmv37y05spZ1": {
+      "session_id": "ses_e8db34afcffee3Cmv37y05spZ1",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db34afcffee3Cmv37y05spZ1",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724cb59c001PialHPdKXBMuPC",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db337d3ffen04y7gJdqFvmhX": {
+      "session_id": "ses_e8db337d3ffen04y7gJdqFvmhX",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db337d3ffen04y7gJdqFvmhX",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724cc8b5001itt20K93djpyRp",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db2f95dffenDxVo40UutMbYy": {
+      "session_id": "ses_e8db2f95dffenDxVo40UutMbYy",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db2f95dffenDxVo40UutMbYy",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724d0783001lM9F26abDn57G1",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db2e470ffeG9FjqDCwpz5GNI": {
+      "session_id": "ses_e8db2e470ffeG9FjqDCwpz5GNI",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db2e470ffeG9FjqDCwpz5GNI",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724d1c91001beug6UA5Dv19U1",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    },
+    "ses_e8db2cd69ffeQKCZufXInl3Zfv": {
+      "session_id": "ses_e8db2cd69ffeQKCZufXInl3Zfv",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "model_calls": 1,
+      "raw_session_usage": {
+        "id": "ses_e8db2cd69ffeQKCZufXInl3Zfv",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "openai",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "outcome": "failed"
+      },
+      "usage_pending": false,
+      "normalized_usage": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "input_plus_output": 0,
+        "billable_total": null,
+        "mapping": "OpenCode counters; cache/input and reasoning/output overlap unverified"
+      },
+      "raw_generation_usage": [
+        {
+          "id": "msg_1724d336d001qOBYdYjj6TGymq",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "tokens": null,
+          "cost": null,
+          "finish": "error"
+        }
+      ]
+    }
+  },
+  "scope": "Missing telemetry recovery from exact current-run session IDs, no history enumeration; original records unchanged"
+}

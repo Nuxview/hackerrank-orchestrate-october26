@@ -1,0 +1,57 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "cases": 2,
+  "status_correct": 2,
+  "sequence_correct": 1,
+  "whole_row_correct": 1,
+  "step_tp": 5,
+  "step_fp": 0,
+  "step_fn": 1,
+  "step_precision": 1.0,
+  "step_recall": 0.8333333333333334,
+  "step_f1": 0.9090909090909091,
+  "field_correct": 35,
+  "field_denominator": 42,
+  "field_correct_by_name": {
+    "evidence_id": 5,
+    "operation": 5,
+    "phase": 5,
+    "resource_id": 5,
+    "state": 5,
+    "step_no": 5,
+    "system_id": 5
+  },
+  "union_slots": 6,
+  "confusion": [
+    {
+      "expected": "COMPLETE",
+      "predicted": "COMPLETE",
+      "count": 1
+    },
+    {
+      "expected": "INCOMPLETE",
+      "predicted": "INCOMPLETE",
+      "count": 1
+    }
+  ],
+  "differences": [
+    {
+      "case_id": "case_03",
+      "status_matches": true,
+      "first_differing_step": 3,
+      "expected": {
+        "step_no": 3,
+        "phase": "VERIFICATION",
+        "system_id": "analytics_platform",
+        "resource_id": "analytics_9406",
+        "operation": "VERIFY_RECORD_ANONYMIZED",
+        "state": "ANONYMIZED",
+        "evidence_id": "evidence_94"
+      },
+      "predicted": null
+    }
+  ],
+  "attempted": 32,
+  "unresolved": 30,
+  "full_sample_finalized": false
+}

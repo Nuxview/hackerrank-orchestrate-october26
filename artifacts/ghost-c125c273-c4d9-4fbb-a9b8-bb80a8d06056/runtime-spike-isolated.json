@@ -1,0 +1,9 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "stage": "development-smoke",
+  "elapsed_seconds": 0.943457536995993,
+  "workspace": "/tmp/opencode/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056-gtn238t4",
+  "returncode": 1,
+  "stdout": "{\"type\":\"error\",\"timestamp\":1792911659514,\"sessionID\":\"ses_e8e232e91ffeR9f5seQBXHOLMj\",\"error\":{\"type\":\"unknown\",\"message\":\"Agent not found: \\\"deletion-runtime\\\"\"}}\n",
+  "stderr": ""
+}

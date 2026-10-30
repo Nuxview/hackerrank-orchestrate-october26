@@ -1,0 +1,14 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "job": "isolated-image-intent-smoke",
+  "stage": "development-smoke",
+  "model": "openai/gpt-6.1-sol",
+  "prompt_sha256": "5af1880ad0fc7b2364f616875df3340bb59b921610a5a0915ac14f40b21a0d2a",
+  "config_sha256": "0460a8d50b0bf0d541a268aec7012bccf271510712477321819af8213f1727e3",
+  "attachment_sha256": "3d80d63a4974db1ef26d99880a575127164d6b861a93fec7a0a4cd293c3d6212",
+  "workspace": "/tmp/opencode/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056-48evmu18",
+  "session_id": null,
+  "tokens": null,
+  "error": "Command '['opencode', 'api', 'get', '/api/agent/deletion-runtime?location[directory]=/tmp/opencode/ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056-48evmu18']' returned non-zero exit status 1.",
+  "elapsed_seconds": 0.7531286009980249
+}

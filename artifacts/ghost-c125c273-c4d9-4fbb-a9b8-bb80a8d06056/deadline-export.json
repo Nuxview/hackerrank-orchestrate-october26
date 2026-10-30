@@ -1,0 +1,1124 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "at": "2026-10-25T13:22:25.679568+00:00",
+  "source_execution": "final-fc426d06-e5d3-4d84-bf9e-0a3710a82c65",
+  "source_metadata_sha256": "4fc618b882c1911e56c1c3f2f6e63e12eecde1ce1af5f2494a05c06993adc998",
+  "rows": 407,
+  "required_rows": 518,
+  "complete": false,
+  "output_sha256": "7a5ee2341d9c6341ccde64f6a28a1f5cae30a080a5d8962f7bb186a8196cebf7",
+  "expanded_positive_violation_cases": [
+    "case_100",
+    "case_101",
+    "case_102",
+    "case_104",
+    "case_105",
+    "case_106",
+    "case_109",
+    "case_110",
+    "case_114",
+    "case_116",
+    "case_118",
+    "case_119",
+    "case_120",
+    "case_122",
+    "case_123",
+    "case_124",
+    "case_125",
+    "case_128",
+    "case_130",
+    "case_131",
+    "case_132",
+    "case_133",
+    "case_134",
+    "case_136",
+    "case_138",
+    "case_139",
+    "case_140",
+    "case_141",
+    "case_142",
+    "case_143",
+    "case_144",
+    "case_145",
+    "case_146",
+    "case_147",
+    "case_148",
+    "case_149",
+    "case_151",
+    "case_153",
+    "case_154",
+    "case_156",
+    "case_158",
+    "case_159",
+    "case_160",
+    "case_161",
+    "case_166",
+    "case_168",
+    "case_169",
+    "case_171",
+    "case_172",
+    "case_173",
+    "case_174",
+    "case_175",
+    "case_176",
+    "case_179",
+    "case_180",
+    "case_181",
+    "case_182",
+    "case_184",
+    "case_185",
+    "case_186",
+    "case_188",
+    "case_191",
+    "case_192",
+    "case_194",
+    "case_197",
+    "case_198",
+    "case_200",
+    "case_203",
+    "case_205",
+    "case_207",
+    "case_208",
+    "case_209",
+    "case_210",
+    "case_211",
+    "case_212",
+    "case_213",
+    "case_214",
+    "case_216",
+    "case_217",
+    "case_220",
+    "case_222",
+    "case_224",
+    "case_227",
+    "case_228",
+    "case_229",
+    "case_230",
+    "case_231",
+    "case_232",
+    "case_234",
+    "case_236",
+    "case_240",
+    "case_241",
+    "case_242",
+    "case_245",
+    "case_246",
+    "case_248",
+    "case_250",
+    "case_251",
+    "case_252",
+    "case_254",
+    "case_255",
+    "case_256",
+    "case_258",
+    "case_259",
+    "case_261",
+    "case_262",
+    "case_263",
+    "case_266",
+    "case_268",
+    "case_269",
+    "case_270",
+    "case_271",
+    "case_272",
+    "case_275",
+    "case_277",
+    "case_278",
+    "case_279",
+    "case_280",
+    "case_281",
+    "case_282",
+    "case_284",
+    "case_287",
+    "case_288",
+    "case_289",
+    "case_290",
+    "case_291",
+    "case_293",
+    "case_296",
+    "case_297",
+    "case_298",
+    "case_300",
+    "case_301",
+    "case_302",
+    "case_303",
+    "case_305",
+    "case_306",
+    "case_307",
+    "case_310",
+    "case_311",
+    "case_312",
+    "case_315",
+    "case_316",
+    "case_317",
+    "case_318",
+    "case_320",
+    "case_321",
+    "case_325",
+    "case_328",
+    "case_329",
+    "case_33",
+    "case_330",
+    "case_332",
+    "case_334",
+    "case_335",
+    "case_337",
+    "case_338",
+    "case_340",
+    "case_341",
+    "case_342",
+    "case_344",
+    "case_347",
+    "case_348",
+    "case_349",
+    "case_35",
+    "case_350",
+    "case_351",
+    "case_352",
+    "case_353",
+    "case_355",
+    "case_356",
+    "case_357",
+    "case_358",
+    "case_359",
+    "case_36",
+    "case_360",
+    "case_361",
+    "case_363",
+    "case_364",
+    "case_365",
+    "case_366",
+    "case_367",
+    "case_368",
+    "case_37",
+    "case_370",
+    "case_371",
+    "case_372",
+    "case_373",
+    "case_376",
+    "case_377",
+    "case_38",
+    "case_382",
+    "case_384",
+    "case_385",
+    "case_386",
+    "case_387",
+    "case_388",
+    "case_389",
+    "case_391",
+    "case_394",
+    "case_396",
+    "case_397",
+    "case_399",
+    "case_40",
+    "case_400",
+    "case_401",
+    "case_402",
+    "case_404",
+    "case_405",
+    "case_406",
+    "case_407",
+    "case_410",
+    "case_413",
+    "case_414",
+    "case_415",
+    "case_416",
+    "case_417",
+    "case_418",
+    "case_419",
+    "case_42",
+    "case_420",
+    "case_421",
+    "case_422",
+    "case_425",
+    "case_426",
+    "case_428",
+    "case_431",
+    "case_432",
+    "case_433",
+    "case_434",
+    "case_435",
+    "case_436",
+    "case_437",
+    "case_438",
+    "case_439",
+    "case_440",
+    "case_441",
+    "case_442",
+    "case_443",
+    "case_444",
+    "case_445",
+    "case_446",
+    "case_447",
+    "case_449",
+    "case_450",
+    "case_451",
+    "case_453",
+    "case_454",
+    "case_455",
+    "case_459",
+    "case_460",
+    "case_461",
+    "case_463",
+    "case_464",
+    "case_466",
+    "case_468",
+    "case_469",
+    "case_47",
+    "case_471",
+    "case_472",
+    "case_473",
+    "case_474",
+    "case_475",
+    "case_476",
+    "case_477",
+    "case_478",
+    "case_479",
+    "case_48",
+    "case_481",
+    "case_482",
+    "case_483",
+    "case_484",
+    "case_485",
+    "case_488",
+    "case_49",
+    "case_490",
+    "case_492",
+    "case_495",
+    "case_496",
+    "case_498",
+    "case_500",
+    "case_503",
+    "case_504",
+    "case_505",
+    "case_507",
+    "case_508",
+    "case_509",
+    "case_510",
+    "case_511",
+    "case_513",
+    "case_514",
+    "case_515",
+    "case_517",
+    "case_518",
+    "case_519",
+    "case_520",
+    "case_522",
+    "case_526",
+    "case_527",
+    "case_528",
+    "case_529",
+    "case_531",
+    "case_532",
+    "case_54",
+    "case_544",
+    "case_546",
+    "case_548",
+    "case_550",
+    "case_56",
+    "case_61",
+    "case_62",
+    "case_63",
+    "case_64",
+    "case_65",
+    "case_66",
+    "case_68",
+    "case_71",
+    "case_72",
+    "case_74",
+    "case_75",
+    "case_76",
+    "case_78",
+    "case_85",
+    "case_87",
+    "case_89",
+    "case_90",
+    "case_91",
+    "case_92",
+    "case_94",
+    "case_95",
+    "case_96",
+    "case_98",
+    "case_99"
+  ],
+  "omitted": [
+    {
+      "case_id": "case_103",
+      "diagnostics": [
+        "security_service/audit_record_9522: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_107",
+      "diagnostics": [
+        "security_service/audit_record_7572: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_108",
+      "diagnostics": [
+        "security_service/audit_record_1469: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_111",
+      "diagnostics": [
+        "security_service/audit_record_8933: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_112",
+      "diagnostics": [
+        "security_service/audit_record_4082: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_126",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_127",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_135",
+      "diagnostics": [
+        "security_service/audit_record_5140: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_137",
+      "diagnostics": [
+        "security_service/audit_record_6779: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_150",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_152",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_155",
+      "diagnostics": [
+        "security_service/audit_record_4199: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_157",
+      "diagnostics": [
+        "security_service/audit_record_8821: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_162",
+      "diagnostics": [
+        "security_service/audit_record_6362: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_178",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_183",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_190",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_204",
+      "diagnostics": [
+        "security_service/audit_record_2736: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_206",
+      "diagnostics": [
+        "security_service/audit_record_9878: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_215",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_218",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_219",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_221",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_225",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_226",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_243",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_244",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_253",
+      "diagnostics": [
+        "security_service/audit_record_2927: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_257",
+      "diagnostics": [
+        "security_service/audit_record_7193: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_260",
+      "diagnostics": [
+        "security_service/audit_record_1876: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_264",
+      "diagnostics": [
+        "security_service/audit_record_6711: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_265",
+      "diagnostics": [
+        "security_service/audit_record_6378: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_267",
+      "diagnostics": [
+        "security_service/audit_record_6621: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_274",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_276",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_294",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_295",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_299",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_304",
+      "diagnostics": [
+        "security_service/audit_record_4759: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_308",
+      "diagnostics": [
+        "security_service/audit_record_3221: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_309",
+      "diagnostics": [
+        "security_service/audit_record_1945: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_313",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_314",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_319",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_322",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_336",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_339",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_34",
+      "diagnostics": [
+        "Owned evidence has extraction uncertainties: evidence_04:129",
+        "Owned evidence has extraction uncertainties: evidence_04:130",
+        "Uncorroborated visual key: evidence_04:130:business_key",
+        "Historical obligation lacks as-of continuity: security_service/audit_record_3753",
+        "security_service/audit_record_3753: Supplied retention/hold period is not established as active",
+        "Unresolved resource category/state: support_platform/support_9538"
+      ]
+    },
+    {
+      "case_id": "case_343",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_345",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_346",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_354",
+      "diagnostics": [
+        "security_service/audit_record_9286: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_362",
+      "diagnostics": [
+        "security_service/audit_record_8638: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_369",
+      "diagnostics": [
+        "security_service/audit_record_337: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_383",
+      "diagnostics": [
+        "security_service/audit_record_989: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_39",
+      "diagnostics": [
+        "Unknown observed treatment: integration_service/data_flow_1121",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_390",
+      "diagnostics": [
+        "legal_service/legal_hold_8049: Supplied retention/hold period is not established as active",
+        "security_service/audit_record_101: Supplied retention/hold period is not established as active",
+        "support_platform/support_5720: Shared support-context condition not established"
+      ]
+    },
+    {
+      "case_id": "case_392",
+      "diagnostics": [
+        "security_service/audit_record_7510: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_393",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_395",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_398",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_403",
+      "diagnostics": [
+        "security_service/audit_record_4733: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_408",
+      "diagnostics": [
+        "security_service/audit_record_4216: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_409",
+      "diagnostics": [
+        "security_service/audit_record_2559: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_41",
+      "diagnostics": [
+        "security_service/audit_record_7814: Supplied retention/hold period is not established as active",
+        "support_platform/support_2667: Shared support-context condition not established"
+      ]
+    },
+    {
+      "case_id": "case_411",
+      "diagnostics": [
+        "security_service/audit_record_4330: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_412",
+      "diagnostics": [
+        "security_service/audit_record_5637: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_423",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_424",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_427",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_430",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_448",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_45",
+      "diagnostics": [
+        "Owned evidence has extraction uncertainties: evidence_37:1500",
+        "Owned evidence has extraction uncertainties: evidence_37:1501",
+        "Owned evidence has extraction uncertainties: evidence_37:1502",
+        "Owned evidence has extraction uncertainties: evidence_37:1503",
+        "Owned evidence has extraction uncertainties: evidence_37:1504",
+        "Owned evidence has extraction uncertainties: evidence_37:1505",
+        "security_service/audit_record_001: Supplied retention/hold period is not established as active",
+        "security_service/audit_record_002: Supplied retention/hold period is not established as active",
+        "security_service/audit_record_003: Invalid timestamp: '25 Aug 2027 04 03 UTC'",
+        "security_service/audit_record_004: Supplied retention/hold period is not established as active",
+        "security_service/audit_record_005: Supplied retention/hold period is not established as active",
+        "security_service/audit_record_006: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_452",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_456",
+      "diagnostics": [
+        "security_service/audit_record_8176: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_457",
+      "diagnostics": [
+        "security_service/audit_record_1171: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_458",
+      "diagnostics": [
+        "security_service/audit_record_6750: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_46",
+      "diagnostics": [
+        "Owned evidence has extraction uncertainties: evidence_42:1735"
+      ]
+    },
+    {
+      "case_id": "case_462",
+      "diagnostics": [
+        "security_service/audit_record_641: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_467",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_470",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_480",
+      "diagnostics": [
+        "security_service/audit_record_7742: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_493",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_494",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_497",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_50",
+      "diagnostics": [
+        "Owned evidence has extraction uncertainties: evidence_19:662",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_502",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_506",
+      "diagnostics": [
+        "security_service/audit_record_1361: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_512",
+      "diagnostics": [
+        "security_service/audit_record_4219: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_516",
+      "diagnostics": [
+        "security_service/audit_record_3777: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_52",
+      "diagnostics": [
+        "Owned evidence has extraction uncertainties: evidence_23:863",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_521",
+      "diagnostics": [
+        "security_service/audit_record_3567: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_524",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_53",
+      "diagnostics": [
+        "support_platform/support_1034: Shared support-context condition not established",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_530",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_543",
+      "diagnostics": [
+        "Tombstone lacks grounded deleted-account readback: tombstone_205",
+        "security_service/audit_record_6244: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_545",
+      "diagnostics": [
+        "Tombstone lacks grounded deleted-account readback: tombstone_946",
+        "security_service/audit_record_5041: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_547",
+      "diagnostics": [
+        "Tombstone lacks grounded deleted-account readback: tombstone_8774",
+        "security_service/audit_record_7352: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_549",
+      "diagnostics": [
+        "Tombstone lacks grounded deleted-account readback: tombstone_3963",
+        "security_service/audit_record_1491: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_55",
+      "diagnostics": [
+        "Uncorroborated visual key: evidence_32:1258:business_key",
+        "Unknown observed treatment: backup_service/backup_9287",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_57",
+      "diagnostics": [
+        "security_service/audit_record_7219: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_58",
+      "diagnostics": [
+        "security_service/audit_record_8465: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_59",
+      "diagnostics": [
+        "security_service/audit_record_962: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_60",
+      "diagnostics": [
+        "security_service/audit_record_629: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_69",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_70",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    },
+    {
+      "case_id": "case_83",
+      "diagnostics": [
+        "security_service/audit_record_2636: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_84",
+      "diagnostics": [
+        "security_service/audit_record_3787: Supplied retention/hold period is not established as active"
+      ]
+    },
+    {
+      "case_id": "case_86",
+      "diagnostics": [
+        "Conflicting same-copy observations: account_service/account_8473/service",
+        "security_service/audit_record_5580: Supplied retention/hold period is not established as active",
+        "No grounded account resource/state proof",
+        "No complete required final-state checks"
+      ]
+    },
+    {
+      "case_id": "case_88",
+      "diagnostics": [
+        "security_service/audit_record_3825: Supplied retention/hold period is not established as active",
+        "support_platform/support_2967: Shared support-context condition not established"
+      ]
+    },
+    {
+      "case_id": "case_97",
+      "diagnostics": [
+        "No grounded account resource/state proof"
+      ]
+    }
+  ],
+  "limitations": "PARTIAL NON-COMPLIANT SUBMISSION: omitted unresolved cases; added INCOMPLETE rows contain supported violations and only known safe plans/checks, not guaranteed exhaustive remediation. No guessed statuses or invented IDs/evidence.",
+  "skipped": [
+    "No new model calls",
+    "No manager/auditor cycle",
+    "No broad test rerun",
+    "No cold-provider package replay",
+    "No further pricing investigation"
+  ]
+}

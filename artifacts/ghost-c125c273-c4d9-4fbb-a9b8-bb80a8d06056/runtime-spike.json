@@ -1,0 +1,8 @@
+{
+  "run_id": "ghost-c125c273-c4d9-4fbb-a9b8-bb80a8d06056",
+  "stage": "development-smoke",
+  "elapsed_seconds": 0.6283137040009024,
+  "returncode": 1,
+  "stdout": "{\"type\":\"error\",\"timestamp\":1792911583632,\"sessionID\":\"ses_e8e2456dbffexVNRJaTM28qx3g\",\"error\":{\"type\":\"unknown\",\"message\":\"Agent not found: \\\"deletion-runtime\\\"\"}}\n",
+  "stderr": ""
+}

@@ -1,0 +1,101 @@
+{
+  "info": {
+    "id": "ses_e8db4e200ffeTT7VGLaocIcS3o",
+    "projectID": "e7aee5ee21f892a0d8d6d023585007342dc9d792",
+    "agent": "deletion-runtime",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "failed",
+    "time": {
+      "created": 1792918887937,
+      "updated": 1792918890836,
+      "idle": 1792918890861
+    },
+    "title": "[redacted:session-title:ses_e8db4e200ffeTT7VGLaocIcS3o]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e8db4e200ffeTT7VGLaocIcS3o]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_1724b1e29001w70PGMUj5kGv0v",
+      "time": {
+        "created": 1792918887977
+      },
+      "type": "agent-switched",
+      "agent": "deletion-runtime",
+      "previous": "deletion-runtime"
+    },
+    {
+      "id": "msg_1724b1e27001TAXjnUWf0Nfkrn",
+      "time": {
+        "created": 1792918888130
+      },
+      "text": "[redacted:text:msg_1724b1e27001TAXjnUWf0Nfkrn]",
+      "files": [
+        {
+          "data": "",
+          "mime": "image/png",
+          "source": {
+            "type": "inline"
+          },
+          "name": "[redacted:file-name:0]"
+        }
+      ],
+      "type": "user"
+    },
+    {
+      "id": "msg_1724b1ed9001N9Q3yftXbURoAB",
+      "time": {
+        "created": 1792918888170,
+        "completed": 1792918890836
+      },
+      "type": "assistant",
+      "agent": "deletion-runtime",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "openai",
+        "variant": "default"
+      },
+      "content": [],
+      "finish": "error",
+      "error": {
+        "type": "provider.invalid-request",
+        "message": "ChatGPT usage limit reached. Check ChatGPT Settings → Usage for details.",
+        "status": 200,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"code\":\"subscription_sharing_usage_limit_exceeded\",\"message\":\"The ChatGPT user has reached their Subscription Sharing usage limit. Ask the user to try again after their usage limit resets or use an API key instead.\",\"param\":null},\"sequence_number\":3}"
+        }
+      }
+    },
+    {
+      "id": "msg_1724b296d001h6ryJ0j28NuKTy",
+      "time": {
+        "created": 1792918890861
+      },
+      "type": "idle",
+      "outcome": "failed",
+      "error": {
+        "type": "provider.invalid-request",
+        "message": "ChatGPT usage limit reached. Check ChatGPT Settings → Usage for details.",
+        "status": 200,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"code\":\"subscription_sharing_usage_limit_exceeded\",\"message\":\"The ChatGPT user has reached their Subscription Sharing usage limit. Ask the user to try again after their usage limit resets or use an API key instead.\",\"param\":null},\"sequence_number\":3}"
+        }
+      }
+    }
+  ]
+}
